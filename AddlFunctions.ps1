@@ -225,10 +225,10 @@ function Import-NPMScript {
 		[String] $FilePath
 	)
 	
-	$VersionString = ('' -ne $Version ? "@$Version" : "")
-	$FilePathString = ('' -ne $Version ? "/$FilePath" : "")
+	$Version = ('' -ne $Version ? "@$Version" : "")
+	$FilePath = ('' -ne $FilePath ? "/$FilePath" : "")
 	
-	return script -Src "https://unpkg.com/$Package$VersionString$FilePathString"
+	return script -Src "https://unpkg.com/$Package$Version$FilePath"
 }
 
 <#

@@ -1,4 +1,4 @@
-# WARNING: This file was automaticaly generated on 2025-06-17T03:03:37.9340736Z
+# WARNING: This file was automaticaly generated on 2025-06-17T23:21:45.7270555Z
 # Do not manually modify this file. Your changes will be overwritten.
 <#
 	This file is part of Mizumiya.
@@ -10415,7 +10415,7 @@ function Import-NPMScript {
 	)
 	
 	$VersionString = ('' -ne $Version ? "@$Version" : "")
-	$FilePathString = ('' -ne $Version ? "/$FilePath" : "")
+	$FilePathString = ('' -ne $FilePath ? "/$FilePath" : "")
 	
 	return script -Src "https://unpkg.com/$Package$VersionString$FilePathString"
 }
