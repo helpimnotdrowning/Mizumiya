@@ -361,6 +361,7 @@ _new_tag __GLOBAL_ATTR__ -Params @(
 	@('VirtualKeyboardPolicy', 'String', @('auto', 'manual')),
 	@('WritingSuggestions', 'String', $_truefalse),
 	
+	@('Role', 'String'),
 	@('AriaHidden', 'String', $_truefalse),
 	@('AriaSort', 'String', @('ascending', 'descending', 'other')),
 	@('AriaLabel', 'String'),
