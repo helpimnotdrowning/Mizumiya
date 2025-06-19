@@ -1,4 +1,4 @@
-# WARNING: This file was automaticaly generated on 2025-06-18T04:29:57.3587471Z
+# WARNING: This file was automaticaly generated on 2025-06-19T08:18:23.0413146Z
 # Do not manually modify this file. Your changes will be overwritten.
 <#
 	This file is part of Mizumiya.
@@ -1410,7 +1410,7 @@ function br {
 .PARAMETER CommandFor
 	Target for the Command attribute.
 
-.PARAMETER Disable
+.PARAMETER Disabled
 	Makes this element unclickable.
 
 .PARAMETER Form
@@ -10302,14 +10302,24 @@ function _map_attributes {
 	
 	$Dict = [Collections.Generic.Dictionary[[String],[TypeAndValue]]]::new()
 	$Attributes.Keys | % {
-		
 		$Name = $_
+		
+		if ($Name -eq 'InnerHTML') {
+			return
+		}
+		
 		$Value = $Attributes[$Name].ToString()
-		$Type = switch ($Attributes[$Name].GetType()) {
-			[Switch] { 'Switch' }
+		$Type = switch ($Attributes[$Name]) {
+			($_.GetType() -eq [Switch]) { 'Switch' }
 			default { 'String' }
 		}
 		
+		# bug where manually specifying a switch like -Param:$False would still
+		# render it, making it useless (the mere presence of HTML switches/
+		# boolean attributes will activate them)
+		if ($Attributes[$Name].GetType() -eq [Switch] -and $Value -ne 'True') {
+			return
+		}
 		
 		switch ($Name) {
 			'DownloadStr' {
@@ -10329,19 +10339,17 @@ function _map_attributes {
 				$CustomAttrs.Keys | % {
 					$Dict.Add($_, [TypeAndValue]@{
 						Type='String'
-						Value=$CustomAttrs[$_]
+						Value=[System.Web.HttpUtility]::HtmlAttributeEncode($CustomAttrs[$_])
 					})
 				}
 				
 				return
 			}
-			
-			'InnerHTML' { return }
 		}
 		
 		$Dict.Add($Name, [TypeAndValue]@{
 			Type=$Type
-			Value=$Value
+			Value=[System.Web.HttpUtility]::HtmlAttributeEncode($Value)
 		})
 	}
 	
@@ -10406,6 +10414,8 @@ function New-HTMLElement {
 	if ($null -ne $Attributes -and $Attributes.Count -ne 0) {
 		$Attributes.Keys | % {
 			$AtName = $_
+			$Value = $Attributes[$AtName].Value
+			$Type = $Attributes[$AtName].Type
 			
 			if ($AtName -cmatch '^(Aria[A-Z]|HttpEquiv$|Hx[A-Z])') {
 				$FixedName = _pascal_to_kebab $AtName
@@ -10413,13 +10423,13 @@ function New-HTMLElement {
 				$FixedName = $AtName.ToLower()
 			}
 			
-			switch ($Attributes[$AtName].Type) {
+			switch ($Type) {
 				'Switch' {
 					$HTML.Add( $FixedName )
 				}
 				
 				{ $_ -in @('String', 'OptionalString') } {
-					$HTML.Add( "$FixedName=`"$($Attributes[$AtName].Value)`"" )
+					$HTML.Add( "$FixedName=""$Value""" )
 				}
 				
 				default { _warn "Invalid type for attribute $FixedName`: $_" }

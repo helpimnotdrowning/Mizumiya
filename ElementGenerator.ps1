@@ -565,7 +565,7 @@ $(_generic_help button)
 .PARAMETER CommandFor
 	Target for the Command attribute.
 
-.PARAMETER Disable
+.PARAMETER Disabled
 	Makes this element unclickable.
 
 .PARAMETER Form
