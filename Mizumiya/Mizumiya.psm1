@@ -1,4 +1,4 @@
-# WARNING: This file was automaticaly generated on 2025-06-19T08:18:23.0413146Z
+# WARNING: This file was automaticaly generated on 2025-07-04T01:04:58.7612001Z
 # Do not manually modify this file. Your changes will be overwritten.
 <#
 	This file is part of Mizumiya.
@@ -211,8 +211,8 @@ function a {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag a -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag a -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -295,8 +295,8 @@ function abbr {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag abbr -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag abbr -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -379,8 +379,8 @@ function address {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag address -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag address -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -507,8 +507,8 @@ function area {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag area -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag area -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -591,8 +591,8 @@ function article {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag article -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag article -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -675,8 +675,8 @@ function aside {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag aside -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag aside -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -797,8 +797,8 @@ function audio {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag audio -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag audio -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -881,8 +881,8 @@ function b {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag b -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag b -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -973,8 +973,8 @@ function base {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag base -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag base -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -1057,8 +1057,8 @@ function bdi {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag bdi -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag bdi -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -1141,8 +1141,8 @@ function bdo {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag bdo -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag bdo -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -1229,8 +1229,8 @@ function blockquote {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag blockquote -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag blockquote -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -1313,8 +1313,8 @@ function body {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag body -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag body -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -1396,8 +1396,8 @@ function br {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag br -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag br -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -1539,8 +1539,8 @@ function button {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag button -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag button -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -1631,8 +1631,8 @@ function canvas {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag canvas -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag canvas -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -1715,8 +1715,8 @@ function caption {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag caption -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag caption -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -1799,8 +1799,8 @@ function cite {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag cite -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag cite -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -1883,8 +1883,8 @@ function code {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag code -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag code -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -1970,8 +1970,8 @@ function col {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag col -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag col -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -2058,8 +2058,8 @@ function colgroup {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag colgroup -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag colgroup -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2143,8 +2143,8 @@ function datatag {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag data -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag data -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2227,8 +2227,8 @@ function datalist {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag datalist -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag datalist -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2311,8 +2311,8 @@ function dd {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag dd -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag dd -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2397,8 +2397,8 @@ function del {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag del -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag del -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2483,8 +2483,8 @@ function details {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag details -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag details -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2567,8 +2567,8 @@ function dfn {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag dfn -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag dfn -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2653,8 +2653,8 @@ function dialog {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag dialog -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag dialog -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2737,8 +2737,8 @@ function div {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag div -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag div -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2821,8 +2821,8 @@ function dl {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag dl -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag dl -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2905,8 +2905,8 @@ function dt {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag dt -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag dt -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -2989,8 +2989,8 @@ function em {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag em -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag em -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -3076,8 +3076,8 @@ function embed {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag embed -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag embed -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -3163,8 +3163,8 @@ function fencedframe {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag fencedframe -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag fencedframe -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -3250,8 +3250,8 @@ function fieldset {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag fieldset -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag fieldset -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -3334,8 +3334,8 @@ function figcaption {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag figcaption -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag figcaption -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -3418,8 +3418,8 @@ function figure {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag figure -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag figure -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -3502,8 +3502,8 @@ function footer {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag footer -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag footer -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -3595,8 +3595,8 @@ function form {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag form -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag form -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -3679,8 +3679,8 @@ function h1 {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag h1 -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag h1 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -3763,8 +3763,8 @@ function h2 {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag h2 -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag h2 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -3847,8 +3847,8 @@ function h3 {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag h3 -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag h3 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -3931,8 +3931,8 @@ function h4 {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag h4 -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag h4 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -4015,8 +4015,8 @@ function h5 {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag h5 -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag h5 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -4099,8 +4099,8 @@ function h6 {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag h6 -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag h6 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -4183,8 +4183,8 @@ function head {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag head -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag head -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -4267,8 +4267,8 @@ function header {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag header -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag header -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -4351,8 +4351,8 @@ function hgroup {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag hgroup -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag hgroup -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -4434,8 +4434,8 @@ function hr {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag hr -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag hr -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -4519,8 +4519,8 @@ function html {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag html -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag html -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -4603,8 +4603,8 @@ function i {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag i -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag i -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -4699,8 +4699,8 @@ function iframe {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag iframe -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag iframe -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -4797,8 +4797,8 @@ function img {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag img -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag img -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -4911,8 +4911,8 @@ function input {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag input -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag input -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -4997,8 +4997,8 @@ function ins {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag ins -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag ins -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -5081,8 +5081,8 @@ function kbd {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag kbd -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag kbd -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -5166,8 +5166,8 @@ function label {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag label -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag label -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -5250,8 +5250,8 @@ function legend {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag legend -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag legend -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -5335,8 +5335,8 @@ function li {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag li -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag li -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -5433,8 +5433,8 @@ function link {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag link -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag link -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -5517,8 +5517,8 @@ function main {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag main -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag main -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -5602,8 +5602,8 @@ function map {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag map -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag map -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -5686,8 +5686,8 @@ function mark {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag mark -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag mark -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -5780,8 +5780,8 @@ function marquee {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag marquee -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag marquee -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -5864,8 +5864,8 @@ function menu {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag menu -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag menu -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -5952,8 +5952,8 @@ function meta {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag meta -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag meta -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -6043,8 +6043,8 @@ function meter {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag meter -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag meter -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6127,8 +6127,8 @@ function nav {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag nav -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag nav -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6211,8 +6211,8 @@ function noscript {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag noscript -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag noscript -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6295,8 +6295,8 @@ function object {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag object -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag object -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6381,8 +6381,8 @@ function ol {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag ol -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag ol -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6467,8 +6467,8 @@ function optgroup {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag optgroup -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag optgroup -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6555,8 +6555,8 @@ function option {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag option -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag option -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6642,8 +6642,8 @@ function output {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag output -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag output -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6726,8 +6726,8 @@ function p {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag p -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag p -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6810,8 +6810,8 @@ function picture {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag picture -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag picture -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6894,8 +6894,8 @@ function pre {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag pre -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag pre -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -6980,8 +6980,8 @@ function progress {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag progress -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag progress -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7065,8 +7065,8 @@ function q {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag q -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag q -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7149,8 +7149,8 @@ function rb {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag rb -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag rb -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7233,8 +7233,8 @@ function rp {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag rp -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag rp -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7317,8 +7317,8 @@ function rt {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag rt -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag rt -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7401,8 +7401,8 @@ function rtc {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag rtc -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag rtc -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7485,8 +7485,8 @@ function ruby {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag ruby -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag ruby -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7569,8 +7569,8 @@ function s {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag s -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag s -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7653,8 +7653,8 @@ function samp {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag samp -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag samp -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7748,8 +7748,8 @@ function script {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag script -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag script -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7832,8 +7832,8 @@ function search {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag search -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag search -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -7916,8 +7916,8 @@ function section {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag section -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag section -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8006,8 +8006,8 @@ function selecttag {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag select -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag select -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8091,8 +8091,8 @@ function slot {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag slot -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag slot -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8175,8 +8175,8 @@ function small {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag small -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag small -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8265,8 +8265,8 @@ function source {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag source -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag source -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -8349,8 +8349,8 @@ function span {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag span -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag span -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8433,8 +8433,8 @@ function strong {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag strong -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag strong -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8521,8 +8521,8 @@ function style {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag style -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag style -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8605,8 +8605,8 @@ function sub {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag sub -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag sub -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8689,8 +8689,8 @@ function summary {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag summary -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag summary -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8773,8 +8773,8 @@ function sup {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag sup -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag sup -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8857,8 +8857,8 @@ function table {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag table -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag table -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -8941,8 +8941,8 @@ function tbody {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag tbody -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag tbody -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9028,8 +9028,8 @@ function td {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag td -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag td -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9116,8 +9116,8 @@ function template {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag template -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag template -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9212,8 +9212,8 @@ function textarea {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag textarea -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag textarea -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9296,8 +9296,8 @@ function tfoot {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag tfoot -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag tfoot -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9385,8 +9385,8 @@ function th {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag th -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag th -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9469,8 +9469,8 @@ function thead {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag thead -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag thead -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9554,8 +9554,8 @@ function time {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag time -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag time -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9638,8 +9638,8 @@ function title {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag title -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag title -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9722,8 +9722,8 @@ function tr {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag tr -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag tr -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9810,8 +9810,8 @@ function track {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag track -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag track -Attributes $PSBoundParameters -Void
 }
 
 <#
@@ -9894,8 +9894,8 @@ function u {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag u -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag u -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -9978,8 +9978,8 @@ function ul {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag ul -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag ul -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -10062,8 +10062,8 @@ function vartag {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag var -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag var -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -10160,8 +10160,8 @@ function video {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag video -Attributes (_map_attributes $PSBoundParameters) -InnerHTML $InnerHTML
+
+	New-HTMLElement -Tag video -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
 
 <#
@@ -10243,46 +10243,30 @@ function wbr {
 
 		[Hashtable] $Attributes
 	)
-	
-	New-HTMLElement -Tag wbr -Attributes (_map_attributes $PSBoundParameters) -Void
+
+	New-HTMLElement -Tag wbr -Attributes $PSBoundParameters -Void
 }
 
-class TypeAndValue {
-	[ValidateSet("Switch", 'String', 'OptionalString')][String] $Type
-	[String] $Value
-}
-
-function _pascal_to_kebab ($str) {
-	# lowercase 1st character, then kebab+lowercase only the next capital letter
-	return $Str -replace "^.",{ $_.Value.ToLower() } -creplace "[A-Z]",{ "-" + $_.Value.ToLower() }
-}
 
 function Get-InnerHTML ($InnerHTML) {
 	if ($null -ne $InnerHTML -and $InnerHTML.GetType() -eq [ScriptBlock]) {
-		return $InnerHTML.Invoke()
+		try {
+			return $InnerHTML.Invoke()
+		} catch {
+			_info $_.Exception
+			_info $_.ScriptStackTrace
+			throw $_
+		}
 	} else {
 		return "$InnerHTML"
 	}
 }
 
-function _map_untyped_attributes {
-	param ( [Hashtable] $Attributes )
-	
-	$Dict = [Collections.Generic.Dictionary[[String],[TypeAndValue]]]::new()
-	
-	$Attributes.Keys | % {
-		$Name = $_
-		$Value = "$($Attributes[$Name])"
-		
-		$Dict.Add( $Name, [TypeAndValue]@{ Type="String"; Value=$Value } )
-	}
-	return $Dict
-}
-
 <#
 .SYNOPSIS
-	Remap attribute names from their PowerShell representation to their proper
-	HTML representation.
+	Take a hashtable of attributes and map them to their HTML representation,
+	ignoring or transforming certain reserved keywords. All attributes are
+	rendered to a single string and returned.
 
 .DESCRIPTION
 	Attributes are remapped from their PowerShell parameter representation
@@ -10295,30 +10279,46 @@ function _map_untyped_attributes {
 	* _hs: better name for the _hyperscript "_" attribute.
 	* Download/DownloadStr: use `-Download` for normal operation, use
 	`-DownloadStr` to name the file.
-	* InnerHTML: discarded; this is handled elsewhere.
+	* InnerHTML: this is handled in New-HTMLElement
+
+.PARAMETER Attributes
+	In most cases, this should be the $PSBoundParameters of the caller. No
+	pre-filtering should be needed since it is done here, but for specific
+	applications where you don't want to edit the module source code directly
+	(like having extra switches or flags), doing so could be useful.
 #>
-function _map_attributes {
-	param ( [Hashtable] $Attributes )
+function _fix_attributes {
+	param (
+		[Hashtable] $Attributes
+	)
 	
-	$Dict = [Collections.Generic.Dictionary[[String],[TypeAndValue]]]::new()
-	$Attributes.Keys | % {
-		$Name = $_
-		
+	# _map_attributes #
+	
+	if ($null -eq $Attributes -or $Attributes.Count -eq 0) {
+		return ''
+	}
+	
+	$FullAttrString = [System.Collections.Generic.List[String]]::new()
+	
+	:main foreach ($Attr in $Attributes.GetEnumerator()) {
+		$Name = $Attr.Key
 		if ($Name -eq 'InnerHTML') {
-			return
+			continue
 		}
 		
-		$Value = $Attributes[$Name].ToString()
-		$Type = switch ($Attributes[$Name]) {
-			($_.GetType() -eq [Switch]) { 'Switch' }
+		$Value = $Attr.Value.ToString()
+		$Type = switch ($Name) {
+			($_.GetType() -eq [Switch]) {
+				# bug where manually specifying a switch like -Param:$False would still
+				# render it, making it useless (the mere presence of HTML switches/
+				# boolean attributes will activate them)
+				if ($Value -eq 'True') {
+					continue
+				}
+				
+				'Switch'
+			}
 			default { 'String' }
-		}
-		
-		# bug where manually specifying a switch like -Param:$False would still
-		# render it, making it useless (the mere presence of HTML switches/
-		# boolean attributes will activate them)
-		if ($Attributes[$Name].GetType() -eq [Switch] -and $Value -ne 'True') {
-			return
 		}
 		
 		switch ($Name) {
@@ -10330,30 +10330,38 @@ function _map_attributes {
 				$Name = '_'
 			}
 			
-			# Custom attributes
 			'Attributes' {
-				# this specifically circumvents the requirements of "real"
-				# parameters
-				$CustomAttrs = $Attributes[$Name]
-				
-				$CustomAttrs.Keys | % {
-					$Dict.Add($_, [TypeAndValue]@{
-						Type='String'
-						Value=[System.Web.HttpUtility]::HtmlAttributeEncode($CustomAttrs[$_])
-					})
+				foreach ($cattr in $Attr.Value.GetEnumerator()) {
+					$FullAttrString.Add("$($cattr.Key)=""$([System.Web.HttpUtility]::HtmlAttributeEncode($cattr.Value))""")
 				}
 				
-				return
+				continue main
 			}
 		}
 		
-		$Dict.Add($Name, [TypeAndValue]@{
-			Type=$Type
-			Value=[System.Web.HttpUtility]::HtmlAttributeEncode($Value)
-		})
+		# _stringify_attributes #
+		
+		if ($Name -cmatch '^(Aria[A-Z]|HttpEquiv$|Hx[A-Z])') {
+			$FixedName = $Name -replace "^.", { $_.Value.ToLower() } -creplace "[A-Z]",{ "-" + $_.Value.ToLower() }
+		} else {
+			$FixedName = $Name.ToLower()
+		}
+		
+		switch ($Type) {
+			'Switch' {
+				$FullAttrString.Add( $FixedName )
+			}
+			
+			'String' {
+				$FullAttrString.Add( "$FixedName=""$Value""" )
+			}
+			
+			# we control the type, no worries
+			default { _warn "Invalid type for attribute $FixedName`: $_" }
+		}
 	}
 	
-	return $Dict
+	return $FullAttrString -join ' '
 }
 
 <#
@@ -10404,49 +10412,23 @@ function New-HTMLElement {
 		[ValidateNotNullOrWhiteSpace()]
 		[String] $Tag,
 		[Switch] $Void,
-		[Collections.Generic.Dictionary[[String], [TypeAndValue]]] $Attributes,
+		[Hashtable] $Attributes,
 		$InnerHTML
 	)
 	
 	$HTML = [System.Collections.Generic.List[String]]::new()
 	$HTML.Add("<$Tag")
 	
-	if ($null -ne $Attributes -and $Attributes.Count -ne 0) {
-		$Attributes.Keys | % {
-			$AtName = $_
-			$Value = $Attributes[$AtName].Value
-			$Type = $Attributes[$AtName].Type
-			
-			if ($AtName -cmatch '^(Aria[A-Z]|HttpEquiv$|Hx[A-Z])') {
-				$FixedName = _pascal_to_kebab $AtName
-			} else {
-				$FixedName = $AtName.ToLower()
-			}
-			
-			switch ($Type) {
-				'Switch' {
-					$HTML.Add( $FixedName )
-				}
-				
-				{ $_ -in @('String', 'OptionalString') } {
-					$HTML.Add( "$FixedName=""$Value""" )
-				}
-				
-				default { _warn "Invalid type for attribute $FixedName`: $_" }
-			}
-		}
-	}
-
+	$HTML.Add((_fix_attributes $Attributes))
+	
 	if ($Void) {
 		if ($InnerHTML) {
 			_warn "Void element $($HTML -join ' ') /> cannot have an InnerHTML, ignoring."
 		}
 		
 		$HTML.Add('/>')
-		
 	} else {
-		$Content = Get-InnerHTML $InnerHTML
-		$HTML.Add(">$Content</$Tag>")
+		$HTML.Add(">$(Get-InnerHTML $InnerHTML)</$Tag>")
 	}
 	
 	return $HTML -join ' '
@@ -10563,11 +10545,7 @@ function HTMLEncode {
 		$Content
 	)
 	
-	if ($null -ne $Content -and $Content.GetType() -eq [ScriptBlock]) {
-		return [System.Web.HttpUtility]::HtmlEncode($Content.Invoke())
-	} else {
-		return [System.Web.HttpUtility]::HtmlEncode("$Content")
-	}
+	return [System.Web.HttpUtility]::HtmlEncode( (Get-InnerHTML $Content) )
 }
 
 <#

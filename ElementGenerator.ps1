@@ -168,11 +168,11 @@ function $FunctionName {
 # &DEFEND $tag/param
 		[Hashtable] `$Attributes
 	)
-	
+
 	$( if ($Void) {
-		"New-HTMLElement -Tag $Tag -Attributes (_map_attributes `$PSBoundParameters) -Void"
+		"New-HTMLElement -Tag $Tag -Attributes `$PSBoundParameters -Void"
 	} else {
-		"New-HTMLElement -Tag $Tag -Attributes (_map_attributes `$PSBoundParameters) -InnerHTML `$InnerHTML"
+		"New-HTMLElement -Tag $Tag -Attributes `$PSBoundParameters -InnerHTML `$InnerHTML"
 	} )
 }
 

@@ -19,42 +19,26 @@
 
 # &IMPORT &ELEMENTS
 
-class TypeAndValue {
-	[ValidateSet("Switch", 'String', 'OptionalString')][String] $Type
-	[String] $Value
-}
-
-function _pascal_to_kebab ($str) {
-	# lowercase 1st character, then kebab+lowercase only the next capital letter
-	return $Str -replace "^.",{ $_.Value.ToLower() } -creplace "[A-Z]",{ "-" + $_.Value.ToLower() }
-}
 
 function Get-InnerHTML ($InnerHTML) {
 	if ($null -ne $InnerHTML -and $InnerHTML.GetType() -eq [ScriptBlock]) {
-		return $InnerHTML.Invoke()
+		try {
+			return $InnerHTML.Invoke()
+		} catch {
+			_info $_.Exception
+			_info $_.ScriptStackTrace
+			throw $_
+		}
 	} else {
 		return "$InnerHTML"
 	}
 }
 
-function _map_untyped_attributes {
-	param ( [Hashtable] $Attributes )
-	
-	$Dict = [Collections.Generic.Dictionary[[String],[TypeAndValue]]]::new()
-	
-	$Attributes.Keys | % {
-		$Name = $_
-		$Value = "$($Attributes[$Name])"
-		
-		$Dict.Add( $Name, [TypeAndValue]@{ Type="String"; Value=$Value } )
-	}
-	return $Dict
-}
-
 <#
 .SYNOPSIS
-	Remap attribute names from their PowerShell representation to their proper
-	HTML representation.
+	Take a hashtable of attributes and map them to their HTML representation,
+	ignoring or transforming certain reserved keywords. All attributes are
+	rendered to a single string and returned.
 
 .DESCRIPTION
 	Attributes are remapped from their PowerShell parameter representation
@@ -67,30 +51,46 @@ function _map_untyped_attributes {
 	* _hs: better name for the _hyperscript "_" attribute.
 	* Download/DownloadStr: use `-Download` for normal operation, use
 	`-DownloadStr` to name the file.
-	* InnerHTML: discarded; this is handled elsewhere.
+	* InnerHTML: this is handled in New-HTMLElement
+
+.PARAMETER Attributes
+	In most cases, this should be the $PSBoundParameters of the caller. No
+	pre-filtering should be needed since it is done here, but for specific
+	applications where you don't want to edit the module source code directly
+	(like having extra switches or flags), doing so could be useful.
 #>
-function _map_attributes {
-	param ( [Hashtable] $Attributes )
+function _fix_attributes {
+	param (
+		[Hashtable] $Attributes
+	)
 	
-	$Dict = [Collections.Generic.Dictionary[[String],[TypeAndValue]]]::new()
-	$Attributes.Keys | % {
-		$Name = $_
-		
+	# _map_attributes #
+	
+	if ($null -eq $Attributes -or $Attributes.Count -eq 0) {
+		return ''
+	}
+	
+	$FullAttrString = [System.Collections.Generic.List[String]]::new()
+	
+	:main foreach ($Attr in $Attributes.GetEnumerator()) {
+		$Name = $Attr.Key
 		if ($Name -eq 'InnerHTML') {
-			return
+			continue
 		}
 		
-		$Value = $Attributes[$Name].ToString()
-		$Type = switch ($Attributes[$Name]) {
-			($_.GetType() -eq [Switch]) { 'Switch' }
+		$Value = $Attr.Value.ToString()
+		$Type = switch ($Name) {
+			($_.GetType() -eq [Switch]) {
+				# bug where manually specifying a switch like -Param:$False would still
+				# render it, making it useless (the mere presence of HTML switches/
+				# boolean attributes will activate them)
+				if ($Value -eq 'True') {
+					continue
+				}
+				
+				'Switch'
+			}
 			default { 'String' }
-		}
-		
-		# bug where manually specifying a switch like -Param:$False would still
-		# render it, making it useless (the mere presence of HTML switches/
-		# boolean attributes will activate them)
-		if ($Attributes[$Name].GetType() -eq [Switch] -and $Value -ne 'True') {
-			return
 		}
 		
 		switch ($Name) {
@@ -102,30 +102,38 @@ function _map_attributes {
 				$Name = '_'
 			}
 			
-			# Custom attributes
 			'Attributes' {
-				# this specifically circumvents the requirements of "real"
-				# parameters
-				$CustomAttrs = $Attributes[$Name]
-				
-				$CustomAttrs.Keys | % {
-					$Dict.Add($_, [TypeAndValue]@{
-						Type='String'
-						Value=[System.Web.HttpUtility]::HtmlAttributeEncode($CustomAttrs[$_])
-					})
+				foreach ($cattr in $Attr.Value.GetEnumerator()) {
+					$FullAttrString.Add("$($cattr.Key)=""$([System.Web.HttpUtility]::HtmlAttributeEncode($cattr.Value))""")
 				}
 				
-				return
+				continue main
 			}
 		}
 		
-		$Dict.Add($Name, [TypeAndValue]@{
-			Type=$Type
-			Value=[System.Web.HttpUtility]::HtmlAttributeEncode($Value)
-		})
+		# _stringify_attributes #
+		
+		if ($Name -cmatch '^(Aria[A-Z]|HttpEquiv$|Hx[A-Z])') {
+			$FixedName = $Name -replace "^.", { $_.Value.ToLower() } -creplace "[A-Z]",{ "-" + $_.Value.ToLower() }
+		} else {
+			$FixedName = $Name.ToLower()
+		}
+		
+		switch ($Type) {
+			'Switch' {
+				$FullAttrString.Add( $FixedName )
+			}
+			
+			'String' {
+				$FullAttrString.Add( "$FixedName=""$Value""" )
+			}
+			
+			# we control the type, no worries
+			default { _warn "Invalid type for attribute $FixedName`: $_" }
+		}
 	}
 	
-	return $Dict
+	return $FullAttrString -join ' '
 }
 
 <#
@@ -176,49 +184,23 @@ function New-HTMLElement {
 		[ValidateNotNullOrWhiteSpace()]
 		[String] $Tag,
 		[Switch] $Void,
-		[Collections.Generic.Dictionary[[String], [TypeAndValue]]] $Attributes,
+		[Hashtable] $Attributes,
 		$InnerHTML
 	)
 	
 	$HTML = [System.Collections.Generic.List[String]]::new()
 	$HTML.Add("<$Tag")
 	
-	if ($null -ne $Attributes -and $Attributes.Count -ne 0) {
-		$Attributes.Keys | % {
-			$AtName = $_
-			$Value = $Attributes[$AtName].Value
-			$Type = $Attributes[$AtName].Type
-			
-			if ($AtName -cmatch '^(Aria[A-Z]|HttpEquiv$|Hx[A-Z])') {
-				$FixedName = _pascal_to_kebab $AtName
-			} else {
-				$FixedName = $AtName.ToLower()
-			}
-			
-			switch ($Type) {
-				'Switch' {
-					$HTML.Add( $FixedName )
-				}
-				
-				{ $_ -in @('String', 'OptionalString') } {
-					$HTML.Add( "$FixedName=""$Value""" )
-				}
-				
-				default { _warn "Invalid type for attribute $FixedName`: $_" }
-			}
-		}
-	}
-
+	$HTML.Add((_fix_attributes $Attributes))
+	
 	if ($Void) {
 		if ($InnerHTML) {
 			_warn "Void element $($HTML -join ' ') /> cannot have an InnerHTML, ignoring."
 		}
 		
 		$HTML.Add('/>')
-		
 	} else {
-		$Content = Get-InnerHTML $InnerHTML
-		$HTML.Add(">$Content</$Tag>")
+		$HTML.Add(">$(Get-InnerHTML $InnerHTML)</$Tag>")
 	}
 	
 	return $HTML -join ' '
@@ -257,11 +239,7 @@ function HTMLEncode {
 		$Content
 	)
 	
-	if ($null -ne $Content -and $Content.GetType() -eq [ScriptBlock]) {
-		return [System.Web.HttpUtility]::HtmlEncode($Content.Invoke())
-	} else {
-		return [System.Web.HttpUtility]::HtmlEncode("$Content")
-	}
+	return [System.Web.HttpUtility]::HtmlEncode( (Get-InnerHTML $Content) )
 }
 
 <#
