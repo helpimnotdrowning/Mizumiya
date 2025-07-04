@@ -125,7 +125,7 @@ function _fix_attributes {
 			}
 			
 			'String' {
-				$FullAttrString.Add( "$FixedName=""$Value""" )
+				$FullAttrString.Add( "$FixedName=""$([System.Web.HttpUtility]::HtmlAttributeEncode($Value))""" )
 			}
 			
 			# we control the type, no worries

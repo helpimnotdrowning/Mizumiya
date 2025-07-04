@@ -1,4 +1,4 @@
-# WARNING: This file was automaticaly generated on 2025-07-04T01:04:58.7612001Z
+# WARNING: This file was automaticaly generated on 2025-07-04T02:10:37.6003198Z
 # Do not manually modify this file. Your changes will be overwritten.
 <#
 	This file is part of Mizumiya.
@@ -10353,7 +10353,7 @@ function _fix_attributes {
 			}
 			
 			'String' {
-				$FullAttrString.Add( "$FixedName=""$Value""" )
+				$FullAttrString.Add( "$FixedName=""$([System.Web.HttpUtility]::HtmlAttributeEncode($Value))""" )
 			}
 			
 			# we control the type, no worries
