@@ -392,7 +392,7 @@ _new_tag __GLOBAL_ATTR__ -Params @(
 	@('HxInclude', 'String'),
 	@('HxIndicator', 'String'),
 	@('HxInherit', 'String'),
-	@('HxParams', 'String', @('*', 'none')),
+	@('HxParams', 'OptionalString', @('*', 'none')),
 	@('HxPatch', 'String'),
 	@('HxPreserve', 'Switch'),
 	@('HxPrompt', 'String'),
