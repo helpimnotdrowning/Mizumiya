@@ -1,4 +1,4 @@
-# WARNING: This file was automaticaly generated on 2025-07-12T21:39:49.8668717Z
+# WARNING: This file was automaticaly generated on 2025-07-15T21:26:22.9413195Z
 # Do not manually modify this file. Your changes will be overwritten.
 <#
 	This file is part of Mizumiya.
@@ -16142,7 +16142,8 @@ function _fix_attributes {
 		# _stringify_attributes #
 		
 		if ($Name -cmatch '^(Aria[A-Z]|HttpEquiv$|Hx[A-Z])') {
-			$FixedName = $Name -replace "^.", { $_.Value.ToLower() } -creplace "[A-Z]",{ "-" + $_.Value.ToLower() }
+			$IsFirstCapital = $true
+			$FixedName = $Name -replace "^.", { $_.Value.ToLower() } -creplace "[A-Z]", { if ($IsFirstCapital) { "-" + $_.Value.ToLower(); $IsFirstCapital = $false } else { $_.Value } }
 		} else {
 			$FixedName = $Name.ToLower()
 		}

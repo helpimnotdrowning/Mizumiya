@@ -114,7 +114,8 @@ function _fix_attributes {
 		# _stringify_attributes #
 		
 		if ($Name -cmatch '^(Aria[A-Z]|HttpEquiv$|Hx[A-Z])') {
-			$FixedName = $Name -replace "^.", { $_.Value.ToLower() } -creplace "[A-Z]",{ "-" + $_.Value.ToLower() }
+			$IsFirstCapital = $true
+			$FixedName = $Name -replace "^.", { $_.Value.ToLower() } -creplace "[A-Z]", { if ($IsFirstCapital) { "-" + $_.Value.ToLower(); $IsFirstCapital = $false } else { $_.Value } }
 		} else {
 			$FixedName = $Name.ToLower()
 		}
