@@ -364,7 +364,7 @@ _new_tag __GLOBAL_ATTR__ -Params @(
 	@('WritingSuggestions', 'String', $_truefalse),
 	
 	@('Role', 'String'),
-	@('AriaActiveDescencant', 'String'),
+	@('AriaActiveDescendant', 'String'),
 	@('AriaAtomic', 'String', $_truefalse),
 	@('AriaAutocomplete', 'String', @('none', 'inline', 'list', 'both')),
 	@('AriaBrailleLabel', 'String'),
