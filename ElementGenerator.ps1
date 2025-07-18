@@ -158,6 +158,7 @@ $Help
 "@ })
 # EXPORTFUNC $FunctionName
 function $FunctionName {
+	[CmdletBinding()]
 	param (
 		$( if (-not $Void) {
 			"[Parameter(ValueFromPipeline)]`n`t`t`$InnerHTML,"

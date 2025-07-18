@@ -1,4 +1,4 @@
-# WARNING: This file was automaticaly generated on 2025-07-15T21:26:22.9413195Z
+# WARNING: This file was automaticaly generated on 2025-07-18T00:20:49.9218741Z
 # Do not manually modify this file. Your changes will be overwritten.
 <#
 	This file is part of Mizumiya.
@@ -128,6 +128,7 @@ function _fatal {
 #>
 # EXPORTFUNC a
 function a {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -271,6 +272,7 @@ function a {
 #>
 # EXPORTFUNC abbr
 function abbr {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -405,6 +407,7 @@ function abbr {
 #>
 # EXPORTFUNC address
 function address {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -574,6 +577,7 @@ function address {
 #>
 # EXPORTFUNC area
 function area {
+	[CmdletBinding()]
 	param (
 		
 
@@ -717,6 +721,7 @@ function area {
 #>
 # EXPORTFUNC article
 function article {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -851,6 +856,7 @@ function article {
 #>
 # EXPORTFUNC aside
 function aside {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -1014,6 +1020,7 @@ function aside {
 #>
 # EXPORTFUNC audio
 function audio {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -1157,6 +1164,7 @@ function audio {
 #>
 # EXPORTFUNC b
 function b {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -1298,6 +1306,7 @@ function b {
 #>
 # EXPORTFUNC base
 function base {
+	[CmdletBinding()]
 	param (
 		
 
@@ -1433,6 +1442,7 @@ function base {
 #>
 # EXPORTFUNC bdi
 function bdi {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -1567,6 +1577,7 @@ function bdi {
 #>
 # EXPORTFUNC bdo
 function bdo {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -1704,6 +1715,7 @@ function bdo {
 #>
 # EXPORTFUNC blockquote
 function blockquote {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -1839,6 +1851,7 @@ function blockquote {
 #>
 # EXPORTFUNC body
 function body {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -1973,6 +1986,7 @@ function body {
 #>
 # EXPORTFUNC br
 function br {
+	[CmdletBinding()]
 	param (
 		
 
@@ -2151,6 +2165,7 @@ function br {
 #>
 # EXPORTFUNC button
 function button {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -2305,6 +2320,7 @@ function button {
 #>
 # EXPORTFUNC canvas
 function canvas {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -2441,6 +2457,7 @@ function canvas {
 #>
 # EXPORTFUNC caption
 function caption {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -2575,6 +2592,7 @@ function caption {
 #>
 # EXPORTFUNC cite
 function cite {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -2709,6 +2727,7 @@ function cite {
 #>
 # EXPORTFUNC code
 function code {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -2846,6 +2865,7 @@ function code {
 #>
 # EXPORTFUNC col
 function col {
+	[CmdletBinding()]
 	param (
 		
 
@@ -2983,6 +3003,7 @@ function col {
 #>
 # EXPORTFUNC colgroup
 function colgroup {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -3118,6 +3139,7 @@ function colgroup {
 #>
 # EXPORTFUNC datatag
 function datatag {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -3253,6 +3275,7 @@ function datatag {
 #>
 # EXPORTFUNC datalist
 function datalist {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -3387,6 +3410,7 @@ function datalist {
 #>
 # EXPORTFUNC dd
 function dd {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -3521,6 +3545,7 @@ function dd {
 #>
 # EXPORTFUNC del
 function del {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -3657,6 +3682,7 @@ function del {
 #>
 # EXPORTFUNC details
 function details {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -3793,6 +3819,7 @@ function details {
 #>
 # EXPORTFUNC dfn
 function dfn {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -3927,6 +3954,7 @@ function dfn {
 #>
 # EXPORTFUNC dialog
 function dialog {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -4063,6 +4091,7 @@ function dialog {
 #>
 # EXPORTFUNC div
 function div {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -4197,6 +4226,7 @@ function div {
 #>
 # EXPORTFUNC dl
 function dl {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -4331,6 +4361,7 @@ function dl {
 #>
 # EXPORTFUNC dt
 function dt {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -4465,6 +4496,7 @@ function dt {
 #>
 # EXPORTFUNC em
 function em {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -4599,6 +4631,7 @@ function em {
 #>
 # EXPORTFUNC embed
 function embed {
+	[CmdletBinding()]
 	param (
 		
 
@@ -4736,6 +4769,7 @@ function embed {
 #>
 # EXPORTFUNC fencedframe
 function fencedframe {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -4873,6 +4907,7 @@ function fencedframe {
 #>
 # EXPORTFUNC fieldset
 function fieldset {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -5010,6 +5045,7 @@ function fieldset {
 #>
 # EXPORTFUNC figcaption
 function figcaption {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -5144,6 +5180,7 @@ function figcaption {
 #>
 # EXPORTFUNC figure
 function figure {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -5278,6 +5315,7 @@ function figure {
 #>
 # EXPORTFUNC footer
 function footer {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -5412,6 +5450,7 @@ function footer {
 #>
 # EXPORTFUNC form
 function form {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -5555,6 +5594,7 @@ function form {
 #>
 # EXPORTFUNC h1
 function h1 {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -5689,6 +5729,7 @@ function h1 {
 #>
 # EXPORTFUNC h2
 function h2 {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -5823,6 +5864,7 @@ function h2 {
 #>
 # EXPORTFUNC h3
 function h3 {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -5957,6 +5999,7 @@ function h3 {
 #>
 # EXPORTFUNC h4
 function h4 {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -6091,6 +6134,7 @@ function h4 {
 #>
 # EXPORTFUNC h5
 function h5 {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -6225,6 +6269,7 @@ function h5 {
 #>
 # EXPORTFUNC h6
 function h6 {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -6359,6 +6404,7 @@ function h6 {
 #>
 # EXPORTFUNC head
 function head {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -6493,6 +6539,7 @@ function head {
 #>
 # EXPORTFUNC header
 function header {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -6627,6 +6674,7 @@ function header {
 #>
 # EXPORTFUNC hgroup
 function hgroup {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -6761,6 +6809,7 @@ function hgroup {
 #>
 # EXPORTFUNC hr
 function hr {
+	[CmdletBinding()]
 	param (
 		
 
@@ -6894,6 +6943,7 @@ function hr {
 #>
 # EXPORTFUNC html
 function html {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -7029,6 +7079,7 @@ function html {
 #>
 # EXPORTFUNC i
 function i {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -7163,6 +7214,7 @@ function i {
 #>
 # EXPORTFUNC iframe
 function iframe {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -7309,6 +7361,7 @@ function iframe {
 #>
 # EXPORTFUNC img
 function img {
+	[CmdletBinding()]
 	param (
 		
 
@@ -7457,6 +7510,7 @@ function img {
 #>
 # EXPORTFUNC input
 function input {
+	[CmdletBinding()]
 	param (
 		
 
@@ -7621,6 +7675,7 @@ function input {
 #>
 # EXPORTFUNC ins
 function ins {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -7757,6 +7812,7 @@ function ins {
 #>
 # EXPORTFUNC kbd
 function kbd {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -7891,6 +7947,7 @@ function kbd {
 #>
 # EXPORTFUNC label
 function label {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -8026,6 +8083,7 @@ function label {
 #>
 # EXPORTFUNC legend
 function legend {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -8160,6 +8218,7 @@ function legend {
 #>
 # EXPORTFUNC li
 function li {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -8295,6 +8354,7 @@ function li {
 #>
 # EXPORTFUNC link
 function link {
+	[CmdletBinding()]
 	param (
 		
 
@@ -8443,6 +8503,7 @@ function link {
 #>
 # EXPORTFUNC main
 function main {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -8577,6 +8638,7 @@ function main {
 #>
 # EXPORTFUNC map
 function map {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -8712,6 +8774,7 @@ function map {
 #>
 # EXPORTFUNC mark
 function mark {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -8846,6 +8909,7 @@ function mark {
 #>
 # EXPORTFUNC marquee
 function marquee {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -8990,6 +9054,7 @@ function marquee {
 #>
 # EXPORTFUNC menu
 function menu {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -9124,6 +9189,7 @@ function menu {
 #>
 # EXPORTFUNC meta
 function meta {
+	[CmdletBinding()]
 	param (
 		
 
@@ -9262,6 +9328,7 @@ function meta {
 #>
 # EXPORTFUNC meter
 function meter {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -9403,6 +9470,7 @@ function meter {
 #>
 # EXPORTFUNC nav
 function nav {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -9537,6 +9605,7 @@ function nav {
 #>
 # EXPORTFUNC noscript
 function noscript {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -9671,6 +9740,7 @@ function noscript {
 #>
 # EXPORTFUNC object
 function object {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -9805,6 +9875,7 @@ function object {
 #>
 # EXPORTFUNC ol
 function ol {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -9941,6 +10012,7 @@ function ol {
 #>
 # EXPORTFUNC optgroup
 function optgroup {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -10077,6 +10149,7 @@ function optgroup {
 #>
 # EXPORTFUNC option
 function option {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -10215,6 +10288,7 @@ function option {
 #>
 # EXPORTFUNC output
 function output {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -10352,6 +10426,7 @@ function output {
 #>
 # EXPORTFUNC p
 function p {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -10486,6 +10561,7 @@ function p {
 #>
 # EXPORTFUNC picture
 function picture {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -10620,6 +10696,7 @@ function picture {
 #>
 # EXPORTFUNC pre
 function pre {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -10754,6 +10831,7 @@ function pre {
 #>
 # EXPORTFUNC progress
 function progress {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -10890,6 +10968,7 @@ function progress {
 #>
 # EXPORTFUNC q
 function q {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -11025,6 +11104,7 @@ function q {
 #>
 # EXPORTFUNC rb
 function rb {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -11159,6 +11239,7 @@ function rb {
 #>
 # EXPORTFUNC rp
 function rp {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -11293,6 +11374,7 @@ function rp {
 #>
 # EXPORTFUNC rt
 function rt {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -11427,6 +11509,7 @@ function rt {
 #>
 # EXPORTFUNC rtc
 function rtc {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -11561,6 +11644,7 @@ function rtc {
 #>
 # EXPORTFUNC ruby
 function ruby {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -11695,6 +11779,7 @@ function ruby {
 #>
 # EXPORTFUNC s
 function s {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -11829,6 +11914,7 @@ function s {
 #>
 # EXPORTFUNC samp
 function samp {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -11963,6 +12049,7 @@ function samp {
 #>
 # EXPORTFUNC script
 function script {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -12108,6 +12195,7 @@ function script {
 #>
 # EXPORTFUNC search
 function search {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -12242,6 +12330,7 @@ function search {
 #>
 # EXPORTFUNC section
 function section {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -12376,6 +12465,7 @@ function section {
 #>
 # EXPORTFUNC selecttag
 function selecttag {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -12516,6 +12606,7 @@ function selecttag {
 #>
 # EXPORTFUNC slot
 function slot {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -12651,6 +12742,7 @@ function slot {
 #>
 # EXPORTFUNC small
 function small {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -12785,6 +12877,7 @@ function small {
 #>
 # EXPORTFUNC source
 function source {
+	[CmdletBinding()]
 	param (
 		
 
@@ -12925,6 +13018,7 @@ function source {
 #>
 # EXPORTFUNC span
 function span {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -13059,6 +13153,7 @@ function span {
 #>
 # EXPORTFUNC strong
 function strong {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -13193,6 +13288,7 @@ function strong {
 #>
 # EXPORTFUNC style
 function style {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -13331,6 +13427,7 @@ function style {
 #>
 # EXPORTFUNC sub
 function sub {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -13465,6 +13562,7 @@ function sub {
 #>
 # EXPORTFUNC summary
 function summary {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -13599,6 +13697,7 @@ function summary {
 #>
 # EXPORTFUNC sup
 function sup {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -13733,6 +13832,7 @@ function sup {
 #>
 # EXPORTFUNC table
 function table {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -13867,6 +13967,7 @@ function table {
 #>
 # EXPORTFUNC tbody
 function tbody {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -14001,6 +14102,7 @@ function tbody {
 #>
 # EXPORTFUNC td
 function td {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -14138,6 +14240,7 @@ function td {
 #>
 # EXPORTFUNC template
 function template {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -14276,6 +14379,7 @@ function template {
 #>
 # EXPORTFUNC textarea
 function textarea {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -14422,6 +14526,7 @@ function textarea {
 #>
 # EXPORTFUNC tfoot
 function tfoot {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -14556,6 +14661,7 @@ function tfoot {
 #>
 # EXPORTFUNC th
 function th {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -14695,6 +14801,7 @@ function th {
 #>
 # EXPORTFUNC thead
 function thead {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -14829,6 +14936,7 @@ function thead {
 #>
 # EXPORTFUNC time
 function time {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -14964,6 +15072,7 @@ function time {
 #>
 # EXPORTFUNC title
 function title {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -15098,6 +15207,7 @@ function title {
 #>
 # EXPORTFUNC tr
 function tr {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -15232,6 +15342,7 @@ function tr {
 #>
 # EXPORTFUNC track
 function track {
+	[CmdletBinding()]
 	param (
 		
 
@@ -15370,6 +15481,7 @@ function track {
 #>
 # EXPORTFUNC u
 function u {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -15504,6 +15616,7 @@ function u {
 #>
 # EXPORTFUNC ul
 function ul {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -15638,6 +15751,7 @@ function ul {
 #>
 # EXPORTFUNC vartag
 function vartag {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -15772,6 +15886,7 @@ function vartag {
 #>
 # EXPORTFUNC video
 function video {
+	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline)]
 		$InnerHTML,
@@ -15920,6 +16035,7 @@ function video {
 #>
 # EXPORTFUNC wbr
 function wbr {
+	[CmdletBinding()]
 	param (
 		
 
