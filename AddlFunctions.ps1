@@ -23,7 +23,7 @@
 function Get-InnerHTML ($InnerHTML) {
 	if ($null -ne $InnerHTML -and $InnerHTML.GetType() -eq [ScriptBlock]) {
 		try {
-			return $InnerHTML.Invoke()
+			return $InnerHTML.Invoke() -join ''
 		} catch {
 			_info $_.Exception
 			_info $_.ScriptStackTrace
@@ -115,7 +115,7 @@ function _fix_attributes {
 		
 		if ($Name -cmatch '^(Aria[A-Z]|HttpEquiv$|Hx[A-Z])') {
 			$IsFirstCapital = $true
-			$FixedName = $Name -replace "^.", { $_.Value.ToLower() } -creplace "[A-Z]", { if ($IsFirstCapital) { "-" + $_.Value.ToLower(); $IsFirstCapital = $false } else { $_.Value } }
+			$FixedName = $Name -replace "^.", { $_.Value.ToLower() } -creplace "[A-Z]", { if ($IsFirstCapital) { "-" + $_.Value.ToLower(); $IsFirstCapital = $false } else { $_.Value.ToLower() } }
 		} else {
 			$FixedName = $Name.ToLower()
 		}

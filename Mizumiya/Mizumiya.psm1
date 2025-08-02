@@ -1,4 +1,4 @@
-# WARNING: This file was automaticaly generated on 2025-07-18T02:03:21.0022570Z
+# WARNING: This file was automaticaly generated on 2025-08-02T00:44:04.4442917Z
 # Do not manually modify this file. Your changes will be overwritten.
 <#
 	This file is part of Mizumiya.
@@ -16167,7 +16167,7 @@ function wbr {
 function Get-InnerHTML ($InnerHTML) {
 	if ($null -ne $InnerHTML -and $InnerHTML.GetType() -eq [ScriptBlock]) {
 		try {
-			return $InnerHTML.Invoke()
+			return $InnerHTML.Invoke() -join ''
 		} catch {
 			_info $_.Exception
 			_info $_.ScriptStackTrace
@@ -16259,7 +16259,7 @@ function _fix_attributes {
 		
 		if ($Name -cmatch '^(Aria[A-Z]|HttpEquiv$|Hx[A-Z])') {
 			$IsFirstCapital = $true
-			$FixedName = $Name -replace "^.", { $_.Value.ToLower() } -creplace "[A-Z]", { if ($IsFirstCapital) { "-" + $_.Value.ToLower(); $IsFirstCapital = $false } else { $_.Value } }
+			$FixedName = $Name -replace "^.", { $_.Value.ToLower() } -creplace "[A-Z]", { if ($IsFirstCapital) { "-" + $_.Value.ToLower(); $IsFirstCapital = $false } else { $_.Value.ToLower() } }
 		} else {
 			$FixedName = $Name.ToLower()
 		}
