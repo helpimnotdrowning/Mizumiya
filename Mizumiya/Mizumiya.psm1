@@ -1,4 +1,4 @@
-# WARNING: This file was automaticaly generated on 2025-08-02T00:44:04.4442917Z
+# WARNING: This file was automaticaly generated on 2025-08-25T05:19:04.1733806Z
 # Do not manually modify this file. Your changes will be overwritten.
 <#
 	This file is part of Mizumiya.
@@ -16223,18 +16223,15 @@ function _fix_attributes {
 		}
 		
 		$Value = $Attr.Value.ToString()
-		$Type = switch ($Name) {
-			($_.GetType() -eq [Switch]) {
-				# bug where manually specifying a switch like -Param:$False would still
-				# render it, making it useless (the mere presence of HTML switches/
-				# boolean attributes will activate them)
-				if ($Value -eq 'True') {
-					continue
-				}
-				
-				'Switch'
+		$Type = if ($Attr.Value -is [Switch]) {
+			# Don't render false switches since that's not how work in HTML
+			if (-not $Attr.Value) {
+				continue
 			}
-			default { 'String' }
+			
+			'Switch'
+		} else {
+			'String'
 		}
 		
 		switch ($Name) {

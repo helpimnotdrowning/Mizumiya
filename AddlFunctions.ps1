@@ -79,18 +79,15 @@ function _fix_attributes {
 		}
 		
 		$Value = $Attr.Value.ToString()
-		$Type = switch ($Name) {
-			($_.GetType() -eq [Switch]) {
-				# bug where manually specifying a switch like -Param:$False would still
-				# render it, making it useless (the mere presence of HTML switches/
-				# boolean attributes will activate them)
-				if ($Value -eq 'True') {
-					continue
-				}
-				
-				'Switch'
+		$Type = if ($Attr.Value -is [Switch]) {
+			# Don't render false switches since that's not how work in HTML
+			if (-not $Attr.Value) {
+				continue
 			}
-			default { 'String' }
+			
+			'Switch'
+		} else {
+			'String'
 		}
 		
 		switch ($Name) {
