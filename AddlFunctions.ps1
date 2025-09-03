@@ -34,6 +34,111 @@ function Get-InnerHTML ($InnerHTML) {
 	}
 }
 
+# c# impl of _fix_attributes
+Add-Type `
+	-Namespace Mizumiya `
+	-Name Utils `
+	-UsingNamespace `
+		System.Collections, System.Collections.Generic, System.Web, `
+		System.Text.RegularExpressions, System.Management.Automation, `
+		System.Text `
+	-MemberDef @"
+public static void _warn(string message) {
+	Console.WriteLine( $"$($PSStyle.Formatting.Warning)[Mizumiya/Warning] {message}$($PSStyle.Reset)" );
+}
+
+public static string FixAttributes(Hashtable Attributes) {
+	// _map_attributes
+	if (Attributes == null || Attributes.Count == 0) {
+		return string.Empty;
+	}
+	
+	var fullAttrString = new System.Text.StringBuilder();
+	
+	foreach (DictionaryEntry attr in Attributes) {
+		string name = attr.Key.ToString();
+		if (name == "InnerHTML") {
+			continue;
+		}
+		
+		object rawValue = attr.Value;
+		string value = rawValue?.ToString() ?? string.Empty;
+		
+		string type;
+		// if (rawValue != null && rawValue.GetType().Name == "SwitchParameter") {
+		if (rawValue != null && rawValue is SwitchParameter) {
+			if (! (SwitchParameter)rawValue ) {
+				// Don't render false switches since that's not how work in HTML
+				continue;
+			}
+			
+			type = "Switch";
+		} else {
+			type = "String";
+		}
+		
+		switch (name) {
+			case "DownloadStr":
+				name = "Download";
+				break;
+			
+			case "_hs":
+				name = "_";
+				break;
+			
+			case "Attributes":
+				if (rawValue is Hashtable nestedAttributes) {
+					foreach (DictionaryEntry cattr in nestedAttributes) {
+						string subName = cattr.Key.ToString();
+						string subValue = HttpUtility.HtmlAttributeEncode(cattr.Value?.ToString() ?? string.Empty);
+						fullAttrString.Append($"{subName}=\"{subValue}\"");
+					}
+				}
+				
+				// we just did all the processing, no need for the rest of this loop
+				continue;
+		}
+		
+		// _stringify_attributes
+		
+		string fixedName;
+		if (Regex.IsMatch(name, "^(Aria[A-Z]|HttpEquiv$|Hx[A-Z])")) {
+			bool isFirstCapital = true;
+			fixedName = Regex.Replace(name, "^.", m => m.Value.ToLower());
+			fixedName = Regex.Replace(fixedName, "[A-Z]", m => {
+				if (isFirstCapital) {
+					isFirstCapital = false;
+					return "-" + m.Value.ToLower();
+				}
+				
+				return m.Value.ToLower();
+			});
+		} else {
+			fixedName = name.ToLower();
+		}
+		
+		switch (type) {
+			case "Switch":
+				fullAttrString.Append(fixedName);
+				break;
+			
+			case "String":
+				fullAttrString.Append($"{fixedName}=\"{HttpUtility.HtmlAttributeEncode(value)}\"");
+				break;
+			
+			default:
+				// we control the type, no worries
+				_warn($"Invalid type for attribute {fixedName}: {type}");
+				break;
+		}
+		
+		fullAttrString.Append(' ');
+	}
+	
+	return fullAttrString.ToString();
+}
+"@
+
 <#
 .SYNOPSIS
 	Take a hashtable of attributes and map them to their HTML representation,
@@ -189,7 +294,7 @@ function New-HTMLElement {
 	$HTML = [System.Collections.Generic.List[String]]::new()
 	$HTML.Add("<$Tag")
 	
-	$HTML.Add((_fix_attributes $Attributes))
+	$HTML.Add( [Mizumiya.Utils]::FixAttributes($Attributes) )
 	
 	if ($Void) {
 		if ($InnerHTML) {
