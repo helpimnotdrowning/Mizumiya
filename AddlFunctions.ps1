@@ -15,15 +15,10 @@
 	Mizumiya. If not, see <https://www.gnu.org/licenses/>.
 #>
 
-# &IMPORT &COMMON
-
-# &IMPORT &ELEMENTS
-
-
 function Get-InnerHTML ($InnerHTML) {
 	if ($null -ne $InnerHTML -and $InnerHTML.GetType() -eq [ScriptBlock]) {
 		try {
-			return $InnerHTML.Invoke() -join ''
+			return (& $InnerHTML) -join ''
 		} catch {
 			_info $_.Exception
 			_info $_.ScriptStackTrace
@@ -175,7 +170,6 @@ function _fix_attributes {
 	
 	When this parameter is passes alongside `-Void`, this parameter is ignored.
 #>
-# EXPORTFUNC New-HTMLElement
 function New-HTMLElement {
 	param(
 		[Parameter(Mandatory)]
@@ -203,35 +197,18 @@ function New-HTMLElement {
 	
 	return $HTML -join ' '
 }
-
-# EXPORTFUNC Import-NPMScript
-function Import-NPMScript {
-	param (
-# &USE script/param
-
-		[Parameter(Mandatory)]
-		[String] $Package,
-		[String] $Version,
-		[String] $FilePath
-	)
-	
-	$Version = ('' -ne $Version ? "@$Version" : "")
-	$FilePath = ('' -ne $FilePath ? "/$FilePath" : "")
-	
-	return script -Src "https://unpkg.com/$Package$Version$FilePath"
-}
+Export-ModuleMember -Function New-HTMLElement
 
 <#
 .SYNOPSIS
 	HTML encode argument
 
 .PARAMETER Content
-	If Content is a scriptblock, it will be Invoke()ed
-	and its output will then be encoded.
+	If Content is a scriptblock, it will be evaluated and its output will then
+	be encoded.
 	
-	Otherwise, it will just be encoded.
+	Otherwise, Content's string representation encoded.
 #>
-# EXPORTFUNC HTMLEncode
 function HTMLEncode {
 	param (
 		$Content
@@ -239,22 +216,39 @@ function HTMLEncode {
 	
 	return [System.Web.HttpUtility]::HtmlEncode( (Get-InnerHTML $Content) )
 }
+Export-ModuleMember -Function HTMLEncode
+
+<#
+.SYNOPSIS
+	HTML Attribute encode argument
+
+.PARAMETER Value
+	Value of the attribute that will be encoded. Unlike HTMLEncode, scriptblocks
+	will not be evaluated.
+#>
+function AttributeEncode {
+	param (
+		$Value
+	)
+	
+	return [System.Web.HttpUtility]::HtmlAttributeEncode( $Value )
+}
+Export-ModuleMember -Function AttributeEncode
 
 <#
 .SYNOPSIS
 	Write HTML doctype declaration. This should be the first thing in your HTML
 	document
 #>
-# EXPORTFUNC doctype
 function doctype {
 	return "<!DOCTYPE html>"
 }
+Export-ModuleMember -Function doctype
 
 <#
 .SYNOPSIS
 	Write an HTML comment
 #>
-# EXPORTFUNC comment
 function comment {
 	param (
 		$InnerHTML
@@ -262,3 +256,4 @@ function comment {
 	
 	return "<!-- $( Get-InnerHTML $InnerHTML ) -->"
 }
+Export-ModuleMember -Function comment

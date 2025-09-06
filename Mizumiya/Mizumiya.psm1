@@ -1,23 +1,5 @@
-# WARNING: This file was automaticaly generated on 2025-08-25T05:19:04.1733806Z
-# Do not manually modify this file. Your changes will be overwritten.
-<#
-	This file is part of Mizumiya.
-
-	Mizumiya is free software: you can redistribute it and/or modify it under the
-	terms of the GNU General Public License as published by the Free Software
-	Foundation, either version 3 of the License, or (at your option) any later
-	version.
-
-	Mizumiya is distributed in the hope that it will be useful, but WITHOUT ANY
-	WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-	FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
-	details.
-
-	You should have received a copy of the GNU General Public License along with
-	Mizumiya. If not, see <https://www.gnu.org/licenses/>.
-#>
-
-
+# WARNING: This file was automaticaly generated! Do not manually modify this
+# file. Your changes will be overwritten. Use Build.ps1 to regenerate this file.
 <#
 	This file is part of Mizumiya.
 
@@ -126,13 +108,11 @@ function _fatal {
 .PARAMETER Type
 	MIME type of destination content. Acts as a hint, but is usually ignored.
 #>
-# EXPORTFUNC a
 function a {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -259,24 +239,23 @@ function a {
 		[ArgumentCompletions('about', 'alternate', 'amphtml', 'apple-touch-icon', 'apple-touch-icon-precompressed', 'apple-touch-startup-image', 'attachment', 'author', 'bookmark', 'canonical', 'category', 'compression-dictionary', 'dns-prefetch', 'edit', 'expect', 'external', 'help', 'icon', 'license', 'manifest', 'me', 'modulepreload', 'next', 'nofollow', 'noopener', 'noreferrer', 'opener', 'pgpkey', 'pingback', 'preconnect', 'preload', 'prerender', 'prev', 'privacy-policy', 'profile', 'search', 'self', 'stylesheet', 'syndication', 'tag', 'terms-of-service')] [String] ${Rel},
 		[ValidateSet('_self', '_blank', '_parent', '_top')] [String] ${Target},
 		[String] ${Type},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag a -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function a
 
 <#
 .SYNOPSIS
 	HTML <abbr> (abbreviation) element
 #>
-# EXPORTFUNC abbr
 function abbr {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -394,24 +373,23 @@ function abbr {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag abbr -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function abbr
 
 <#
 .SYNOPSIS
 	HTML <address> (contact info) element
 #>
-# EXPORTFUNC address
 function address {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -529,12 +507,13 @@ function address {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag address -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function address
 
 <#
 .SYNOPSIS
@@ -575,12 +554,9 @@ function address {
 	Where to open the linked page. Generally, you should only need to use _self
 	(current tab, default) and _blank (new tab/window)
 #>
-# EXPORTFUNC area
 function area {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -708,24 +684,23 @@ function area {
 		[ArgumentCompletions('about', 'alternate', 'amphtml', 'apple-touch-icon', 'apple-touch-icon-precompressed', 'apple-touch-startup-image', 'attachment', 'author', 'bookmark', 'canonical', 'category', 'compression-dictionary', 'dns-prefetch', 'edit', 'expect', 'external', 'help', 'icon', 'license', 'manifest', 'me', 'modulepreload', 'next', 'nofollow', 'noopener', 'noreferrer', 'opener', 'pgpkey', 'pingback', 'preconnect', 'preload', 'prerender', 'prev', 'privacy-policy', 'profile', 'search', 'self', 'stylesheet', 'syndication', 'tag', 'terms-of-service')] [String] ${Rel},
 		[ValidateSet('rect', 'circle', 'poly', 'default')] [String] ${Shape},
 		[ValidateSet('_self', '_blank', '_parent', '_top')] [String] ${Target},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag area -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function area
 
 <#
 .SYNOPSIS
 	HTML <article> (semantically independent content area) element
 #>
-# EXPORTFUNC article
 function article {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -843,24 +818,23 @@ function article {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag article -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function article
 
 <#
 .SYNOPSIS
 	HTML <aside> (semantically not-as-important content area) element
 #>
-# EXPORTFUNC aside
 function aside {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -978,12 +952,13 @@ function aside {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag aside -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function aside
 
 <#
 .SYNOPSIS
@@ -1018,13 +993,11 @@ function aside {
 .PARAMETER Src
 	Audio source.
 #>
-# EXPORTFUNC audio
 function audio {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -1151,24 +1124,23 @@ function audio {
 		[Switch] ${Muted},
 		[ValidateSet('none', 'metadata', 'auto', '')] [String] ${Preload},
 		[String] ${Src},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag audio -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function audio
 
 <#
 .SYNOPSIS
 	HTML <b> (bold/"bring attention to") element
 #>
-# EXPORTFUNC b
 function b {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -1286,12 +1258,13 @@ function b {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag b -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function b
 
 <#
 .SYNOPSIS
@@ -1304,12 +1277,9 @@ function b {
 	Where to open the linked page. Generally, you should only need to use _self
 	(current tab, default) and _blank (new tab/window)
 #>
-# EXPORTFUNC base
 function base {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -1429,24 +1399,23 @@ function base {
 		[String] ${_hs},
 		[String] ${Href},
 		[ValidateSet('_self', '_blank', '_parent', '_top')] [String] ${Target},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag base -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function base
 
 <#
 .SYNOPSIS
 	HTML <bdi> (bidirectional isolation) element
 #>
-# EXPORTFUNC bdi
 function bdi {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -1564,24 +1533,23 @@ function bdi {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag bdi -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function bdi
 
 <#
 .SYNOPSIS
 	HTML <bdo> (bidirectional override) element
 #>
-# EXPORTFUNC bdo
 function bdo {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -1699,12 +1667,13 @@ function bdo {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag bdo -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function bdo
 
 <#
 .SYNOPSIS
@@ -1713,13 +1682,11 @@ function bdo {
 .PARAMETER Cite
 	URL pointing to the source of the quote
 #>
-# EXPORTFUNC blockquote
 function blockquote {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -1838,24 +1805,23 @@ function blockquote {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${Cite},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag blockquote -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function blockquote
 
 <#
 .SYNOPSIS
 	HTML <body> element
 #>
-# EXPORTFUNC body
 function body {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -1973,23 +1939,21 @@ function body {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag body -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function body
 
 <#
 .SYNOPSIS
 	HTML <br> (linebreak) element
 #>
-# EXPORTFUNC br
 function br {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -2107,12 +2071,13 @@ function br {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag br -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function br
 
 <#
 .SYNOPSIS
@@ -2163,13 +2128,11 @@ function br {
 .PARAMETER Value
 	This button's name when it is submitted in a form.
 #>
-# EXPORTFUNC button
 function button {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -2301,12 +2264,13 @@ function button {
 		[ValidateSet('hide', 'show', 'toggle')] [String] ${PopoverTargetAction},
 		[ValidateSet('submit', 'reset', 'button')] [String] ${Type},
 		[String] ${Value},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag button -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function button
 
 <#
 .SYNOPSIS
@@ -2318,13 +2282,11 @@ function button {
 .PARAMETER Width
 	Canvas width in pixels.
 #>
-# EXPORTFUNC canvas
 function canvas {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -2444,24 +2406,23 @@ function canvas {
 		[String] ${_hs},
 		[String] ${Height},
 		[String] ${Width},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag canvas -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function canvas
 
 <#
 .SYNOPSIS
 	HTML <caption> (for tables) element
 #>
-# EXPORTFUNC caption
 function caption {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -2579,24 +2540,23 @@ function caption {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag caption -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function caption
 
 <#
 .SYNOPSIS
 	HTML <cite> (for titles of cited works) element
 #>
-# EXPORTFUNC cite
 function cite {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -2714,24 +2674,23 @@ function cite {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag cite -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function cite
 
 <#
 .SYNOPSIS
 	HTML <code> element
 #>
-# EXPORTFUNC code
 function code {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -2849,12 +2808,13 @@ function code {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag code -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function code
 
 <#
 .SYNOPSIS
@@ -2863,12 +2823,9 @@ function code {
 .PARAMETER Span
 	When under a colgroup, specifies how many columns the group consumes.
 #>
-# EXPORTFUNC col
 function col {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -2987,12 +2944,13 @@ function col {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${Span},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag col -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function col
 
 <#
 .SYNOPSIS
@@ -3001,13 +2959,11 @@ function col {
 .PARAMETER Span
 	Specifies how many columns this entire colgroup consumes.
 #>
-# EXPORTFUNC colgroup
 function colgroup {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -3126,24 +3082,23 @@ function colgroup {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${Span},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag colgroup -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function colgroup
 
 <#
 .SYNOPSIS
 	HTML <data> element
 #>
-# EXPORTFUNC datatag
 function datatag {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -3262,24 +3217,23 @@ function datatag {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${Value},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag data -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function datatag
 
 <#
 .SYNOPSIS
 	HTML <datalist> (list of <options>s for an <input>) element
 #>
-# EXPORTFUNC datalist
 function datalist {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -3397,24 +3351,23 @@ function datalist {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag datalist -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function datalist
 
 <#
 .SYNOPSIS
 	HTML <dd> (definition of a <dt> term) element
 #>
-# EXPORTFUNC dd
 function dd {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -3532,24 +3485,23 @@ function dd {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag dd -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function dd
 
 <#
 .SYNOPSIS
 	HTML <del> (deleted/removed text) element
 #>
-# EXPORTFUNC del
 function del {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -3669,24 +3621,23 @@ function del {
 		[String] ${_hs},
 		[String] ${Cite},
 		[String] ${DateTime},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag del -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function del
 
 <#
 .SYNOPSIS
 	HTML <details> (collapsable widget for <summary>) element
 #>
-# EXPORTFUNC details
 function details {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -3806,24 +3757,23 @@ function details {
 		[String] ${_hs},
 		[Switch] ${Open},
 		[String] ${Name},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag details -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function details
 
 <#
 .SYNOPSIS
 	HTML <dfn> (term/word definition) element
 #>
-# EXPORTFUNC dfn
 function dfn {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -3941,24 +3891,23 @@ function dfn {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag dfn -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function dfn
 
 <#
 .SYNOPSIS
 	HTML <dialog> (dialog box/alert/modal/etc...) element
 #>
-# EXPORTFUNC dialog
 function dialog {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -4078,24 +4027,23 @@ function dialog {
 		[String] ${_hs},
 		[ValidateSet('any', 'closerequest', 'none')] [String] ${ClosedBy},
 		[Switch] ${Open},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag dialog -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function dialog
 
 <#
 .SYNOPSIS
 	HTML <div> element
 #>
-# EXPORTFUNC div
 function div {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -4213,24 +4161,23 @@ function div {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag div -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function div
 
 <#
 .SYNOPSIS
 	HTML <dl> (list of <dt> terms and their <dd> definitions) element
 #>
-# EXPORTFUNC dl
 function dl {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -4348,24 +4295,23 @@ function dl {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag dl -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function dl
 
 <#
 .SYNOPSIS
 	HTML <dt> (term for a <dl>) element
 #>
-# EXPORTFUNC dt
 function dt {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -4483,24 +4429,23 @@ function dt {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag dt -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function dt
 
 <#
 .SYNOPSIS
 	HTML <em> (emphasis) element
 #>
-# EXPORTFUNC em
 function em {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -4618,23 +4563,21 @@ function em {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag em -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function em
 
 <#
 .SYNOPSIS
 	HTML <embed> element
 #>
-# EXPORTFUNC embed
 function embed {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -4756,24 +4699,23 @@ function embed {
 		[String] ${Src},
 		[String] ${Type},
 		[String] ${Width},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag embed -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function embed
 
 <#
 .SYNOPSIS
 	HTML <fencedframe> (next-generation iframe) element
 #>
-# EXPORTFUNC fencedframe
 function fencedframe {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -4894,24 +4836,23 @@ function fencedframe {
 		[String] ${Allow},
 		[String] ${Height},
 		[String] ${Width},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag fencedframe -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function fencedframe
 
 <#
 .SYNOPSIS
 	HTML <fieldset> element
 #>
-# EXPORTFUNC fieldset
 function fieldset {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -5032,24 +4973,23 @@ function fieldset {
 		[Switch] ${Disabled},
 		[String] ${Form},
 		[String] ${Name},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag fieldset -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function fieldset
 
 <#
 .SYNOPSIS
 	HTML <figcaption> element
 #>
-# EXPORTFUNC figcaption
 function figcaption {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -5167,24 +5107,23 @@ function figcaption {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag figcaption -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function figcaption
 
 <#
 .SYNOPSIS
 	HTML <figure> element
 #>
-# EXPORTFUNC figure
 function figure {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -5302,24 +5241,23 @@ function figure {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag figure -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function figure
 
 <#
 .SYNOPSIS
 	HTML <footer> element
 #>
-# EXPORTFUNC footer
 function footer {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -5437,24 +5375,23 @@ function footer {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag footer -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function footer
 
 <#
 .SYNOPSIS
 	HTML <form> element
 #>
-# EXPORTFUNC form
 function form {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -5581,24 +5518,23 @@ function form {
 		[ValidateSet('post', 'get', 'dialog')] [String] ${Method},
 		[Switch] ${NoValidate},
 		[ValidateSet('_self', '_blank', '_parent', '_top')] [String] ${Target},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag form -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function form
 
 <#
 .SYNOPSIS
 	HTML <h1> element
 #>
-# EXPORTFUNC h1
 function h1 {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -5716,24 +5652,23 @@ function h1 {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag h1 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function h1
 
 <#
 .SYNOPSIS
 	HTML <h2> element
 #>
-# EXPORTFUNC h2
 function h2 {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -5851,24 +5786,23 @@ function h2 {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag h2 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function h2
 
 <#
 .SYNOPSIS
 	HTML <h3> element
 #>
-# EXPORTFUNC h3
 function h3 {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -5986,24 +5920,23 @@ function h3 {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag h3 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function h3
 
 <#
 .SYNOPSIS
 	HTML <h4> element
 #>
-# EXPORTFUNC h4
 function h4 {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -6121,24 +6054,23 @@ function h4 {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag h4 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function h4
 
 <#
 .SYNOPSIS
 	HTML <h5> element
 #>
-# EXPORTFUNC h5
 function h5 {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -6256,24 +6188,23 @@ function h5 {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag h5 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function h5
 
 <#
 .SYNOPSIS
 	HTML <h6> element
 #>
-# EXPORTFUNC h6
 function h6 {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -6391,24 +6322,23 @@ function h6 {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag h6 -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function h6
 
 <#
 .SYNOPSIS
 	HTML <head> element
 #>
-# EXPORTFUNC head
 function head {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -6526,24 +6456,23 @@ function head {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag head -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function head
 
 <#
 .SYNOPSIS
 	HTML <header> element
 #>
-# EXPORTFUNC header
 function header {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -6661,24 +6590,23 @@ function header {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag header -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function header
 
 <#
 .SYNOPSIS
 	HTML <hgroup> (group of headers) element
 #>
-# EXPORTFUNC hgroup
 function hgroup {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -6796,23 +6724,21 @@ function hgroup {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag hgroup -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function hgroup
 
 <#
 .SYNOPSIS
 	HTML <hr> element
 #>
-# EXPORTFUNC hr
 function hr {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -6930,24 +6856,23 @@ function hr {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag hr -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function hr
 
 <#
 .SYNOPSIS
 	HTML <html> element
 #>
-# EXPORTFUNC html
 function html {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -7066,24 +6991,23 @@ function html {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${Xmlns},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag html -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function html
 
 <#
 .SYNOPSIS
 	HTML <i> (idiomatic (previously italic)) element
 #>
-# EXPORTFUNC i
 function i {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -7201,24 +7125,23 @@ function i {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag i -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function i
 
 <#
 .SYNOPSIS
 	HTML <iframe> element
 #>
-# EXPORTFUNC iframe
 function iframe {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -7348,23 +7271,21 @@ function iframe {
 		[String] ${Src},
 		[String] ${SrcDoc},
 		[String] ${Width},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag iframe -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function iframe
 
 <#
 .SYNOPSIS
 	HTML <img> element
 #>
-# EXPORTFUNC img
 function img {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -7497,23 +7418,21 @@ function img {
 		[String] ${SrcSet},
 		[String] ${Width},
 		[String] ${UseMap},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag img -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function img
 
 <#
 .SYNOPSIS
 	HTML <input> element
 #>
-# EXPORTFUNC input
 function input {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -7662,24 +7581,23 @@ function input {
 		[String] ${Step},
 		[String] ${Value},
 		[String] ${Width},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag input -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function input
 
 <#
 .SYNOPSIS
 	HTML <ins> (added/inserted text) element
 #>
-# EXPORTFUNC ins
 function ins {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -7799,24 +7717,23 @@ function ins {
 		[String] ${_hs},
 		[String] ${Cite},
 		[String] ${DateTime},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag ins -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function ins
 
 <#
 .SYNOPSIS
 	HTML <kbd> (keyboard key) element
 #>
-# EXPORTFUNC kbd
 function kbd {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -7934,24 +7851,23 @@ function kbd {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag kbd -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function kbd
 
 <#
 .SYNOPSIS
 	HTML <label> element
 #>
-# EXPORTFUNC label
 function label {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -8070,24 +7986,23 @@ function label {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${For},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag label -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function label
 
 <#
 .SYNOPSIS
 	HTML <legend> element
 #>
-# EXPORTFUNC legend
 function legend {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -8205,24 +8120,23 @@ function legend {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag legend -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function legend
 
 <#
 .SYNOPSIS
 	HTML <list> (list item) element
 #>
-# EXPORTFUNC li
 function li {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -8341,23 +8255,21 @@ function li {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${Value},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag li -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function li
 
 <#
 .SYNOPSIS
 	HTML <link> element
 #>
-# EXPORTFUNC link
 function link {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -8490,24 +8402,23 @@ function link {
 		[ValidateSet('about', 'alternate', 'amphtml', 'apple-touch-icon', 'apple-touch-icon-precompressed', 'apple-touch-startup-image', 'attachment', 'author', 'bookmark', 'canonical', 'category', 'compression-dictionary', 'dns-prefetch', 'edit', 'expect', 'external', 'help', 'icon', 'license', 'manifest', 'me', 'modulepreload', 'next', 'nofollow', 'noopener', 'noreferrer', 'opener', 'pgpkey', 'pingback', 'preconnect', 'preload', 'prerender', 'prev', 'privacy-policy', 'profile', 'search', 'self', 'stylesheet', 'syndication', 'tag', 'terms-of-service')] [String] ${Rel},
 		[String] ${Sizes},
 		[String] ${Type},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag link -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function link
 
 <#
 .SYNOPSIS
 	HTML <main> (main content of a <body>) element
 #>
-# EXPORTFUNC main
 function main {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -8625,24 +8536,23 @@ function main {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag main -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function main
 
 <#
 .SYNOPSIS
 	HTML <map> (image map) element
 #>
-# EXPORTFUNC map
 function map {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -8761,24 +8671,23 @@ function map {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${Name},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag map -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function map
 
 <#
 .SYNOPSIS
 	HTML <mark> (marked/highlighted text) element
 #>
-# EXPORTFUNC mark
 function mark {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -8896,24 +8805,23 @@ function mark {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag mark -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function mark
 
 <#
 .SYNOPSIS
 	HTML <marquee> ((deprecated)) element
 #>
-# EXPORTFUNC marquee
 function marquee {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -9041,24 +8949,23 @@ function marquee {
 		[Switch] ${TrueSpeed},
 		[String] ${VSpace},
 		[String] ${Width},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag marquee -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function marquee
 
 <#
 .SYNOPSIS
 	HTML <menu> (toolbar, or something) element
 #>
-# EXPORTFUNC menu
 function menu {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -9176,23 +9083,21 @@ function menu {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag menu -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function menu
 
 <#
 .SYNOPSIS
 	HTML <meta> element
 #>
-# EXPORTFUNC meta
 function meta {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -9315,24 +9220,23 @@ function meta {
 		[ValidateSet('content-security-policy', 'content-type', 'default-style', 'x-ua-compatible', 'refresh')] [String] ${HttpEquiv},
 		[String] ${Media},
 		[String] ${Name},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag meta -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function meta
 
 <#
 .SYNOPSIS
 	HTML <meter> element
 #>
-# EXPORTFUNC meter
 function meter {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -9457,24 +9361,23 @@ function meter {
 		[String] ${High},
 		[String] ${Optimum},
 		[String] ${Form},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag meter -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function meter
 
 <#
 .SYNOPSIS
 	HTML <nav> element
 #>
-# EXPORTFUNC nav
 function nav {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -9592,24 +9495,23 @@ function nav {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag nav -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function nav
 
 <#
 .SYNOPSIS
 	HTML <noscript> element
 #>
-# EXPORTFUNC noscript
 function noscript {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -9727,24 +9629,23 @@ function noscript {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag noscript -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function noscript
 
 <#
 .SYNOPSIS
 	HTML <object> element
 #>
-# EXPORTFUNC object
 function object {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -9862,24 +9763,23 @@ function object {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag object -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function object
 
 <#
 .SYNOPSIS
 	HTML <ol> (ordered list) element
 #>
-# EXPORTFUNC ol
 function ol {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -9999,24 +9899,23 @@ function ol {
 		[String] ${_hs},
 		[Switch] ${Reversed},
 		[String] ${Start},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag ol -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function ol
 
 <#
 .SYNOPSIS
 	HTML <optgroup> (group of <options> in a <select>) element
 #>
-# EXPORTFUNC optgroup
 function optgroup {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -10136,24 +10035,23 @@ function optgroup {
 		[String] ${_hs},
 		[Switch] ${Disabled},
 		[String] ${Label},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag optgroup -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function optgroup
 
 <#
 .SYNOPSIS
 	HTML <option> (choice in a <select> or <datalist>) element
 #>
-# EXPORTFUNC option
 function option {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -10275,24 +10173,23 @@ function option {
 		[String] ${Label},
 		[Switch] ${Selected},
 		[String] ${Value},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag option -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function option
 
 <#
 .SYNOPSIS
 	HTML <output> element
 #>
-# EXPORTFUNC output
 function output {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -10413,24 +10310,23 @@ function output {
 		[String] ${For},
 		[String] ${Form},
 		[String] ${Name},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag output -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function output
 
 <#
 .SYNOPSIS
 	HTML <p> element
 #>
-# EXPORTFUNC p
 function p {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -10548,24 +10444,23 @@ function p {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag p -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function p
 
 <#
 .SYNOPSIS
 	HTML <picture> (alternatives of an image) element
 #>
-# EXPORTFUNC picture
 function picture {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -10683,24 +10578,23 @@ function picture {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag picture -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function picture
 
 <#
 .SYNOPSIS
 	HTML <pre> (pre-formatted text) element
 #>
-# EXPORTFUNC pre
 function pre {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -10818,24 +10712,23 @@ function pre {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag pre -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function pre
 
 <#
 .SYNOPSIS
 	HTML <progress> element
 #>
-# EXPORTFUNC progress
 function progress {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -10955,24 +10848,23 @@ function progress {
 		[String] ${_hs},
 		[String] ${Max},
 		[String] ${Value},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag progress -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function progress
 
 <#
 .SYNOPSIS
 	HTML <q> (quotation) element
 #>
-# EXPORTFUNC q
 function q {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -11091,24 +10983,23 @@ function q {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${Cite},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag q -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function q
 
 <#
 .SYNOPSIS
 	HTML <rb> ((deprecated, use just <ruby>) ruby body) element
 #>
-# EXPORTFUNC rb
 function rb {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -11226,24 +11117,23 @@ function rb {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag rb -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function rb
 
 <#
 .SYNOPSIS
 	HTML <rp> (fallback ruby parenthesis) element
 #>
-# EXPORTFUNC rp
 function rp {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -11361,24 +11251,23 @@ function rp {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag rp -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function rp
 
 <#
 .SYNOPSIS
 	HTML <rt> (ruby text) element
 #>
-# EXPORTFUNC rt
 function rt {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -11496,24 +11385,23 @@ function rt {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag rt -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function rt
 
 <#
 .SYNOPSIS
 	HTML <rtc> ((deprecated) ruby text container) element
 #>
-# EXPORTFUNC rtc
 function rtc {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -11631,24 +11519,23 @@ function rtc {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag rtc -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function rtc
 
 <#
 .SYNOPSIS
 	HTML <ruby> (ruby annotation) element
 #>
-# EXPORTFUNC ruby
 function ruby {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -11766,24 +11653,23 @@ function ruby {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag ruby -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function ruby
 
 <#
 .SYNOPSIS
 	HTML <s> (strikethrough) element
 #>
-# EXPORTFUNC s
 function s {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -11901,24 +11787,23 @@ function s {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag s -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function s
 
 <#
 .SYNOPSIS
 	HTML <samp> (sample output) element
 #>
-# EXPORTFUNC samp
 function samp {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -12036,24 +11921,23 @@ function samp {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag samp -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function samp
 
 <#
 .SYNOPSIS
 	HTML <script> element
 #>
-# EXPORTFUNC script
 function script {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -12182,24 +12066,23 @@ function script {
 		[ValidateSet('no-referrer', 'no-referrer-when-downgrade', 'origin', 'origin-when-cross-origin', 'same-origin', 'strict-origin', 'strict-origin-when-cross-origin', 'unsafe-url')] [String] ${ReferrerPolicy},
 		[String] ${Src},
 		[ArgumentCompletions('importmap', 'module', 'speculationrules', 'text/javascript', 'text/hyperscript')] [String] ${Type},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag script -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function script
 
 <#
 .SYNOPSIS
 	HTML <search> element
 #>
-# EXPORTFUNC search
 function search {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -12317,24 +12200,23 @@ function search {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag search -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function search
 
 <#
 .SYNOPSIS
 	HTML <section> (semantic section of content) element
 #>
-# EXPORTFUNC section
 function section {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -12452,24 +12334,23 @@ function section {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag section -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function section
 
 <#
 .SYNOPSIS
 	HTML <select> (dropdown) element
 #>
-# EXPORTFUNC selecttag
 function selecttag {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -12593,24 +12474,23 @@ function selecttag {
 		[String] ${Name},
 		[Switch] ${Required},
 		[String] ${Size},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag select -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function selecttag
 
 <#
 .SYNOPSIS
 	HTML <insertion area for a component <template>> element
 #>
-# EXPORTFUNC slot
 function slot {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -12729,24 +12609,23 @@ function slot {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${Name},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag slot -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function slot
 
 <#
 .SYNOPSIS
 	HTML <small> (small text) element
 #>
-# EXPORTFUNC small
 function small {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -12864,23 +12743,21 @@ function small {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag small -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function small
 
 <#
 .SYNOPSIS
 	HTML <source> (options for media elements) element
 #>
-# EXPORTFUNC source
 function source {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -13005,24 +12882,23 @@ function source {
 		[String] ${Media},
 		[String] ${Height},
 		[String] ${Width},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag source -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function source
 
 <#
 .SYNOPSIS
 	HTML <span> element
 #>
-# EXPORTFUNC span
 function span {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -13140,24 +13016,23 @@ function span {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag span -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function span
 
 <#
 .SYNOPSIS
 	HTML <strong> (important text) element
 #>
-# EXPORTFUNC strong
 function strong {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -13275,24 +13150,23 @@ function strong {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag strong -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function strong
 
 <#
 .SYNOPSIS
 	HTML <style> element
 #>
-# EXPORTFUNC style
 function style {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -13414,24 +13288,23 @@ function style {
 		[String] ${Media},
 		[String] ${Nonce},
 		[ArgumentCompletions('text/css', 'text/tailwindcss')] [String] ${Type},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag style -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function style
 
 <#
 .SYNOPSIS
 	HTML <sub> (subscript) element
 #>
-# EXPORTFUNC sub
 function sub {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -13549,24 +13422,23 @@ function sub {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag sub -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function sub
 
 <#
 .SYNOPSIS
 	HTML <summary> (for <details) element
 #>
-# EXPORTFUNC summary
 function summary {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -13684,24 +13556,23 @@ function summary {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag summary -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function summary
 
 <#
 .SYNOPSIS
 	HTML <sup> (superscript) element
 #>
-# EXPORTFUNC sup
 function sup {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -13819,24 +13690,23 @@ function sup {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag sup -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function sup
 
 <#
 .SYNOPSIS
 	HTML <table> element
 #>
-# EXPORTFUNC table
 function table {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -13954,24 +13824,23 @@ function table {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag table -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function table
 
 <#
 .SYNOPSIS
 	HTML <tbody> element
 #>
-# EXPORTFUNC tbody
 function tbody {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -14089,24 +13958,23 @@ function tbody {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag tbody -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function tbody
 
 <#
 .SYNOPSIS
 	HTML <td> (table cell) element
 #>
-# EXPORTFUNC td
 function td {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -14227,24 +14095,23 @@ function td {
 		[String] ${ColSpan},
 		[String] ${Headers},
 		[String] ${RowSpan},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag td -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function td
 
 <#
 .SYNOPSIS
 	HTML <template> (HTML fragment for templating in JS) element
 #>
-# EXPORTFUNC template
 function template {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -14366,24 +14233,23 @@ function template {
 		[String] ${ShadowRootClonable},
 		[String] ${ShadowRootDelegatesFocus},
 		[String] ${ShadowRootSerializable},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag template -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function template
 
 <#
 .SYNOPSIS
 	HTML <textarea> (multi-line text input) element
 #>
-# EXPORTFUNC textarea
 function textarea {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -14513,24 +14379,23 @@ function textarea {
 		[Switch] ${Required},
 		[String] ${Rows},
 		[ValidateSet('hard', 'soft', 'off')] [String] ${Wrap},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag textarea -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function textarea
 
 <#
 .SYNOPSIS
 	HTML <tfoot> element
 #>
-# EXPORTFUNC tfoot
 function tfoot {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -14648,24 +14513,23 @@ function tfoot {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag tfoot -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function tfoot
 
 <#
 .SYNOPSIS
 	HTML <th> element
 #>
-# EXPORTFUNC th
 function th {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -14788,24 +14652,23 @@ function th {
 		[String] ${Headers},
 		[String] ${RowSpan},
 		[ValidateSet('row', 'col', 'rowgroup', 'colgroup')] [String] ${Scope},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag th -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function th
 
 <#
 .SYNOPSIS
 	HTML <thead> element
 #>
-# EXPORTFUNC thead
 function thead {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -14923,24 +14786,23 @@ function thead {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag thead -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function thead
 
 <#
 .SYNOPSIS
 	HTML <time> element
 #>
-# EXPORTFUNC time
 function time {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -15059,24 +14921,23 @@ function time {
 		[String] ${HxVars},
 		[String] ${_hs},
 		[String] ${datetime},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag time -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function time
 
 <#
 .SYNOPSIS
 	HTML <title> element
 #>
-# EXPORTFUNC title
 function title {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -15194,24 +15055,23 @@ function title {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag title -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function title
 
 <#
 .SYNOPSIS
 	HTML <tr> element
 #>
-# EXPORTFUNC tr
 function tr {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -15329,23 +15189,21 @@ function tr {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag tr -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function tr
 
 <#
 .SYNOPSIS
 	HTML <track> (for audio and video) element
 #>
-# EXPORTFUNC track
 function track {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -15468,24 +15326,23 @@ function track {
 		[String] ${Label},
 		[String] ${Src},
 		[String] ${SrcLang},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag track -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function track
 
 <#
 .SYNOPSIS
 	HTML <u> (unarticulated annotation (previously underline)) element
 #>
-# EXPORTFUNC u
 function u {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -15603,24 +15460,23 @@ function u {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag u -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function u
 
 <#
 .SYNOPSIS
 	HTML <ul> (unordered list) element
 #>
-# EXPORTFUNC ul
 function ul {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -15738,24 +15594,23 @@ function ul {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag ul -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function ul
 
 <#
 .SYNOPSIS
 	HTML <var> (mathematical variable) element
 #>
-# EXPORTFUNC vartag
 function vartag {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -15873,24 +15728,23 @@ function vartag {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag var -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function vartag
 
 <#
 .SYNOPSIS
 	HTML <video> element
 #>
-# EXPORTFUNC video
 function video {
 	[CmdletBinding()]
 	param (
-		[Parameter(ValueFromPipeline)]
-		$InnerHTML,
-
+		[Parameter(ValueFromPipeline)] $InnerHTML,
+		
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -16022,23 +15876,21 @@ function video {
 		[ValidateSet('none', 'metadata', 'auto')] [String] ${Preload},
 		[String] ${Src},
 		[String] ${Width},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag video -Attributes $PSBoundParameters -InnerHTML $InnerHTML
 }
+Export-ModuleMember -Function video
 
 <#
 .SYNOPSIS
 	HTML <wbr> (line break opportunity) element
 #>
-# EXPORTFUNC wbr
 function wbr {
 	[CmdletBinding()]
 	param (
-		
-
 		[String] ${AccessKey},
 		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
 		[ValidateSet('on', 'off')] [String] ${Autocorrect},
@@ -16156,18 +16008,19 @@ function wbr {
 		[ValidateSet('true', 'false')] [String] ${HxValidate},
 		[String] ${HxVars},
 		[String] ${_hs},
-
+		
 		[Hashtable] $Attributes
 	)
-
+	
 	New-HTMLElement -Tag wbr -Attributes $PSBoundParameters -Void
 }
+Export-ModuleMember -Function wbr
 
 
 function Get-InnerHTML ($InnerHTML) {
 	if ($null -ne $InnerHTML -and $InnerHTML.GetType() -eq [ScriptBlock]) {
 		try {
-			return $InnerHTML.Invoke() -join ''
+			return (& $InnerHTML) -join ''
 		} catch {
 			_info $_.Exception
 			_info $_.ScriptStackTrace
@@ -16319,7 +16172,6 @@ function _fix_attributes {
 	
 	When this parameter is passes alongside `-Void`, this parameter is ignored.
 #>
-# EXPORTFUNC New-HTMLElement
 function New-HTMLElement {
 	param(
 		[Parameter(Mandatory)]
@@ -16347,163 +16199,18 @@ function New-HTMLElement {
 	
 	return $HTML -join ' '
 }
-
-# EXPORTFUNC Import-NPMScript
-function Import-NPMScript {
-	param (
-		[String] ${AccessKey},
-		[ValidateSet('none', 'off', 'sentences', 'on', 'words', 'characters')] [String] ${Autocapitalize},
-		[ValidateSet('on', 'off')] [String] ${Autocorrect},
-		[Switch] ${Autofocus},
-		[String] ${Class},
-		[ValidateSet('true', 'false', 'plaintext-only')] [String] ${ContentEditable},
-		[ValidateSet('ltr', 'rtl', 'auto')] [String] ${Dir},
-		[ValidateSet('true', 'false')] [String] ${Draggable},
-		[ValidateSet('enter', 'done', 'go', 'next', 'previous', 'search', 'send')] [String] ${EnterKeyHint},
-		[Switch] ${Hidden},
-		[String] ${Id},
-		[Switch] ${Inert},
-		[ValidateSet('none', 'text', 'decimal', 'numeric', 'tel', 'search', 'email', 'url')] [String] ${InputMode},
-		[String] ${ItemId},
-		[String] ${ItemProp},
-		[String] ${ItemRef},
-		[Switch] ${ItemScope},
-		[String] ${ItemType},
-		[String] ${Lang},
-		[ValidateSet('auto', 'hint', 'manual')] [String] ${Popover},
-		[String] ${Slot},
-		[ValidateSet('true', 'false')] [String] ${Spellcheck},
-		[String] ${Style},
-		[String] ${TabIndex},
-		[String] ${Title},
-		[ValidateSet('yes', 'no')] [String] ${Translate},
-		[ValidateSet('auto', 'manual')] [String] ${VirtualKeyboardPolicy},
-		[ValidateSet('true', 'false')] [String] ${WritingSuggestions},
-		[String] ${Role},
-		[String] ${AriaActiveDescendant},
-		[ValidateSet('true', 'false')] [String] ${AriaAtomic},
-		[ValidateSet('none', 'inline', 'list', 'both')] [String] ${AriaAutocomplete},
-		[String] ${AriaBrailleLabel},
-		[String] ${AriaBrailleRoleDescription},
-		[ValidateSet('true', 'false')] [String] ${AriaBusy},
-		[ValidateSet('true', 'false', 'mixed', 'undefined')] [String] ${AriaChecked},
-		[String] ${AriaColCount},
-		[String] ${AriaColIndex},
-		[String] ${AriaColIndexText},
-		[String] ${AriaColSpan},
-		[String] ${AriaControls},
-		[ValidateSet('page', 'step', 'location', 'date', 'time', 'true', 'false')] [String] ${AriaCurrent},
-		[String] ${AriaDescribedBy},
-		[String] ${AriaDescription},
-		[String] ${AriaDetails},
-		[ValidateSet('true', 'false')] [String] ${AriaDisabled},
-		[ValidateSet('copy', 'execute', 'link', 'move', 'none', 'popup')] [String] ${AriaDropEffect},
-		[String] ${AriaErrorMessage},
-		[ValidateSet('true', 'false', 'undefined')] [String] ${AriaExpanded},
-		[String] ${AriaFlowTo},
-		[ValidateSet('true', 'false', 'undefined')] [String] ${AriaGrabbed},
-		[ValidateSet('true', 'false', 'menu', 'listbox', 'tree', 'grid', 'dialog')] [String] ${AriaHasPopup},
-		[ValidateSet('true', 'false', 'undefined')] [String] ${AriaHidden},
-		[ValidateSet('true', 'false', 'grammar', 'spelling')] [String] ${AriaInvalid},
-		[String] ${AriaKeyboardShortcuts},
-		[String] ${AriaLabel},
-		[String] ${AriaLabelledBy},
-		[String] ${AriaLevel},
-		[ValidateSet('assertive', 'off', 'polite')] [String] ${AriaLive},
-		[ValidateSet('true', 'false')] [String] ${AriaModal},
-		[ValidateSet('true', 'false')] [String] ${AriaMultiline},
-		[ValidateSet('true', 'false')] [String] ${AriaMultiSelectable},
-		[ValidateSet('horizontal', 'vertical', 'undefined')] [String] ${AriaOrientation},
-		[String] ${AriaOwns},
-		[String] ${AriaPlaceholder},
-		[String] ${AriaPosInset},
-		[ValidateSet('true', 'false', 'mixed', 'undefined')] [String] ${AriaPressed},
-		[ValidateSet('true', 'false')] [String] ${AriaReadOnly},
-		[ValidateSet('additions', 'all', 'removals', 'text')] [String] ${AriaRelevant},
-		[ValidateSet('true', 'false')] [String] ${AriaRequired},
-		[String] ${AriaRoleDescription},
-		[String] ${AriaRowCount},
-		[String] ${AriaRowIndex	},
-		[String] ${AriaRowIndexText},
-		[String] ${AriaRowSpan},
-		[ValidateSet('true', 'false', 'undefined')] [String] ${AriaSelected},
-		[String] ${AriaSetSize},
-		[ValidateSet('ascending', 'descending', 'none', 'other')] [String] ${AriaSort},
-		[String] ${AriaValueMax},
-		[String] ${AriaValueMin},
-		[String] ${AriaValueNow},
-		[String] ${AriaValueText},
-		[String] ${HxGet},
-		[String] ${HxPost},
-		[ArgumentCompletions('true', 'false')] [String] ${HxPush-Url},
-		[String] ${HxSelect},
-		[String] ${HxSelect-Oob},
-		[ArgumentCompletions('innerHTML', 'outerHTML', 'textContent', 'beforebegin', 'afterbegin', 'beforeend', 'afterend', 'delete', 'none')] [String] ${HxSwap},
-		[String] ${HxSwap-Oob},
-		[String] ${HxTarget},
-		[String] ${HxTrigger},
-		[String] ${HxVals},
-		[ValidateSet('true', 'false')] [String] ${HxBoost},
-		[String] ${HxConfirm},
-		[String] ${HxDelete},
-		[Switch] ${HxDisable},
-		[String] ${HxDisabled-Elt},
-		[String] ${HxDisinherit},
-		[String] ${HxEncoding},
-		[String] ${HxExt},
-		[String] ${HxHeaders},
-		[String] ${HxHistory},
-		[String] ${HxHistory-Elt},
-		[String] ${HxInclude},
-		[String] ${HxIndicator},
-		[String] ${HxInherit},
-		[ArgumentCompletions('*', 'none')] [String] ${HxParams},
-		[String] ${HxPatch},
-		[Switch] ${HxPreserve},
-		[String] ${HxPrompt},
-		[String] ${HxPut},
-		[ArgumentCompletions('true', 'false')] [String] ${HxReplace-Url},
-		[String] ${HxRequest},
-		[ArgumentCompletions('drop', 'abort', 'replace', 'queue')] [String] ${HxSync},
-		[ValidateSet('true', 'false')] [String] ${HxValidate},
-		[String] ${HxVars},
-		[String] ${_hs},
-		[Switch] ${Async},
-		[ValidateSet('render')] [String] ${Blocking},
-		[ValidateSet('anonymous', 'use-credentials')] [String] ${CrossOrigin},
-		[Switch] ${Defer},
-		[ValidateSet('high', 'low', 'auto')] [String] ${FetchPriority},
-		[String] ${Integrity},
-		[Switch] ${NoModule},
-		[String] ${Nonce},
-		[ValidateSet('no-referrer', 'no-referrer-when-downgrade', 'origin', 'origin-when-cross-origin', 'same-origin', 'strict-origin', 'strict-origin-when-cross-origin', 'unsafe-url')] [String] ${ReferrerPolicy},
-		[String] ${Src},
-		[ArgumentCompletions('importmap', 'module', 'speculationrules', 'text/javascript', 'text/hyperscript')] [String] ${Type},
-
-
-		[Parameter(Mandatory)]
-		[String] $Package,
-		[String] $Version,
-		[String] $FilePath
-	)
-	
-	$Version = ('' -ne $Version ? "@$Version" : "")
-	$FilePath = ('' -ne $FilePath ? "/$FilePath" : "")
-	
-	return script -Src "https://unpkg.com/$Package$Version$FilePath"
-}
+Export-ModuleMember -Function New-HTMLElement
 
 <#
 .SYNOPSIS
 	HTML encode argument
 
 .PARAMETER Content
-	If Content is a scriptblock, it will be Invoke()ed
-	and its output will then be encoded.
+	If Content is a scriptblock, it will be evaluated and its output will then
+	be encoded.
 	
-	Otherwise, it will just be encoded.
+	Otherwise, Content's string representation encoded.
 #>
-# EXPORTFUNC HTMLEncode
 function HTMLEncode {
 	param (
 		$Content
@@ -16511,22 +16218,39 @@ function HTMLEncode {
 	
 	return [System.Web.HttpUtility]::HtmlEncode( (Get-InnerHTML $Content) )
 }
+Export-ModuleMember -Function HTMLEncode
+
+<#
+.SYNOPSIS
+	HTML Attribute encode argument
+
+.PARAMETER Value
+	Value of the attribute that will be encoded. Unlike HTMLEncode, scriptblocks
+	will not be evaluated.
+#>
+function AttributeEncode {
+	param (
+		$Value
+	)
+	
+	return [System.Web.HttpUtility]::HtmlAttributeEncode( $Value )
+}
+Export-ModuleMember -Function AttributeEncode
 
 <#
 .SYNOPSIS
 	Write HTML doctype declaration. This should be the first thing in your HTML
 	document
 #>
-# EXPORTFUNC doctype
 function doctype {
 	return "<!DOCTYPE html>"
 }
+Export-ModuleMember -Function doctype
 
 <#
 .SYNOPSIS
 	Write an HTML comment
 #>
-# EXPORTFUNC comment
 function comment {
 	param (
 		$InnerHTML
@@ -16534,3 +16258,4 @@ function comment {
 	
 	return "<!-- $( Get-InnerHTML $InnerHTML ) -->"
 }
+Export-ModuleMember -Function comment

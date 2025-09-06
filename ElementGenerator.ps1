@@ -156,26 +156,32 @@ $( if ('' -ne $Help) { @"
 $Help
 #>
 "@ })
-# EXPORTFUNC $FunctionName
 function $FunctionName {
 	[CmdletBinding()]
+$( if (-not $Void) { @"
 	param (
-		$( if (-not $Void) {
-			"[Parameter(ValueFromPipeline)]`n`t`t`$InnerHTML,"
-		} )
-
-# &DEFBEGIN $tag/param
-		$($AttrParams -join "`t`t")
-# &DEFEND $tag/param
+		[Parameter(ValueFromPipeline)] `$InnerHTML,
+		
+		$($AttrParams -join "`t`t")`t`t
 		[Hashtable] `$Attributes
 	)
-
+"@
+		} else { @"
+	param (
+		$($AttrParams -join "`t`t")`t`t
+		[Hashtable] `$Attributes
+	)
+"@
+		}
+	)
+	
 	$( if ($Void) {
 		"New-HTMLElement -Tag $Tag -Attributes `$PSBoundParameters -Void"
 	} else {
 		"New-HTMLElement -Tag $Tag -Attributes `$PSBoundParameters -InnerHTML `$InnerHTML"
 	} )
 }
+Export-ModuleMember -Function $FunctionName
 
 "@
 }
