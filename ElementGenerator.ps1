@@ -416,7 +416,7 @@ _new_tag __GLOBAL_ATTR__ -Params @(
 	@('AriaRequired', 'String', $_truefalse),
 	@('AriaRoleDescription', 'String'),
 	@('AriaRowCount', 'String'),
-	@('AriaRowIndex	', 'String'),
+	@('AriaRowIndex', 'String'),
 	@('AriaRowIndexText', 'String'),
 	@('AriaRowSpan', 'String'),
 	@('AriaSelected', 'String', $_truefalseundef),
